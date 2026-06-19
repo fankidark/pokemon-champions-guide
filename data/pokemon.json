@@ -1,0 +1,542 @@
+[
+  {
+    "id": 0,
+    "name": "baxcalibur",
+    "nameZh": "戟脊龙",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 115,
+      "atk": 165,
+      "def": 112,
+      "spa": 90,
+      "spd": 96,
+      "spe": 107
+    },
+    "abilities": {
+      "normal": [
+        "Refrigerate"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "baxcalibur-mega",
+        "types": [
+          "dragon",
+          "ice"
+        ],
+        "baseStats": {
+          "hp": 115,
+          "atk": 165,
+          "def": 112,
+          "spa": 90,
+          "spd": 96,
+          "spe": 107
+        },
+        "ability": "Refrigerate",
+        "megaStone": "Baxcaliburite",
+        "tier": "S",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "froslass",
+    "nameZh": "雪妖女",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 90,
+      "spa": 130,
+      "spd": 110,
+      "spe": 130
+    },
+    "abilities": {
+      "normal": [
+        "Cursed Body"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "froslass-mega",
+        "types": [
+          "ice",
+          "ghost"
+        ],
+        "baseStats": {
+          "hp": 70,
+          "atk": 80,
+          "def": 90,
+          "spa": 130,
+          "spd": 110,
+          "spe": 130
+        },
+        "ability": "Cursed Body",
+        "megaStone": "Froslassite",
+        "tier": "S",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "feraligatr",
+    "nameZh": "大力鳄",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 145,
+      "def": 110,
+      "spa": 89,
+      "spd": 103,
+      "spe": 108
+    },
+    "abilities": {
+      "normal": [
+        "Dragonize"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "feraligatr-mega",
+        "types": [
+          "water",
+          "dragon"
+        ],
+        "baseStats": {
+          "hp": 85,
+          "atk": 145,
+          "def": 110,
+          "spa": 89,
+          "spd": 103,
+          "spe": 108
+        },
+        "ability": "Dragonize",
+        "megaStone": "Feraligatrite",
+        "tier": "A",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "excadrill",
+    "nameZh": "龙头地鼠",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 110,
+      "atk": 155,
+      "def": 80,
+      "spa": 50,
+      "spd": 75,
+      "spe": 118
+    },
+    "abilities": {
+      "normal": [
+        "Piercing Drill"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "excadrill-mega",
+        "types": [
+          "ground",
+          "steel"
+        ],
+        "baseStats": {
+          "hp": 110,
+          "atk": 155,
+          "def": 80,
+          "spa": 50,
+          "spd": 75,
+          "spe": 118
+        },
+        "ability": "Piercing Drill",
+        "megaStone": "Excadrilite",
+        "tier": "S",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "talonflame",
+    "nameZh": "烈箭鹰",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "atk": 131,
+      "def": 81,
+      "spa": 84,
+      "spd": 79,
+      "spe": 146
+    },
+    "abilities": {
+      "normal": [
+        "Gale Wings"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "talonflame-mega",
+        "types": [
+          "fire",
+          "flying"
+        ],
+        "baseStats": {
+          "hp": 78,
+          "atk": 131,
+          "def": 81,
+          "spa": 84,
+          "spd": 79,
+          "spe": 146
+        },
+        "ability": "Gale Wings",
+        "megaStone": "Talonflite",
+        "tier": "A",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "haxorus",
+    "nameZh": "双斧战龙",
+    "types": [
+      "dragon",
+      "steel"
+    ],
+    "baseStats": {
+      "hp": 76,
+      "atk": 167,
+      "def": 110,
+      "spa": 60,
+      "spd": 90,
+      "spe": 117
+    },
+    "abilities": {
+      "normal": [
+        "Tough Claws"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "haxorus-mega",
+        "types": [
+          "dragon",
+          "steel"
+        ],
+        "baseStats": {
+          "hp": 76,
+          "atk": 167,
+          "def": 110,
+          "spa": 60,
+          "spd": 90,
+          "spe": 117
+        },
+        "ability": "Tough Claws",
+        "megaStone": "Haxorite",
+        "tier": "S",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "togekiss",
+    "nameZh": "波克基斯",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 50,
+      "def": 105,
+      "spa": 150,
+      "spd": 135,
+      "spe": 100
+    },
+    "abilities": {
+      "normal": [
+        "Pixilate"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "togekiss-mega",
+        "types": [
+          "fairy",
+          "flying"
+        ],
+        "baseStats": {
+          "hp": 85,
+          "atk": 50,
+          "def": 105,
+          "spa": 150,
+          "spd": 135,
+          "spe": 100
+        },
+        "ability": "Pixilate",
+        "megaStone": "Togekissite",
+        "tier": "A",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "arcanine",
+    "nameZh": "风速犬",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "atk": 140,
+      "def": 90,
+      "spa": 110,
+      "spd": 90,
+      "spe": 115
+    },
+    "abilities": {
+      "normal": [
+        "Intimidate"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "arcanine-mega",
+        "types": [
+          "fire",
+          "fighting"
+        ],
+        "baseStats": {
+          "hp": 90,
+          "atk": 140,
+          "def": 90,
+          "spa": 110,
+          "spd": 90,
+          "spe": 115
+        },
+        "ability": "Intimidate",
+        "megaStone": "Arcanite",
+        "tier": "A",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "milotic",
+    "nameZh": "美纳斯",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "atk": 60,
+      "def": 109,
+      "spa": 140,
+      "spd": 145,
+      "spe": 91
+    },
+    "abilities": {
+      "normal": [
+        "Multiscale"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "milotic-mega",
+        "types": [
+          "water",
+          "fairy"
+        ],
+        "baseStats": {
+          "hp": 95,
+          "atk": 60,
+          "def": 109,
+          "spa": 140,
+          "spd": 145,
+          "spe": 91
+        },
+        "ability": "Multiscale",
+        "megaStone": "Milotite",
+        "tier": "A",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "chandelure",
+    "nameZh": "水晶灯火灵",
+    "types": [
+      "ghost",
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "atk": 55,
+      "def": 100,
+      "spa": 175,
+      "spd": 100,
+      "spe": 90
+    },
+    "abilities": {
+      "normal": [
+        "Shadow Tag"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "chandelure-mega",
+        "types": [
+          "ghost",
+          "fire"
+        ],
+        "baseStats": {
+          "hp": 60,
+          "atk": 55,
+          "def": 100,
+          "spa": 175,
+          "spd": 100,
+          "spe": 90
+        },
+        "ability": "Shadow Tag",
+        "megaStone": "Chandelurite",
+        "tier": "S",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "kommo-o",
+    "nameZh": "杖尾鳞甲龙",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "atk": 130,
+      "def": 135,
+      "spa": 120,
+      "spd": 125,
+      "spe": 105
+    },
+    "abilities": {
+      "normal": [
+        "Overcoat"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "kommo-o-mega",
+        "types": [
+          "dragon",
+          "fighting"
+        ],
+        "baseStats": {
+          "hp": 75,
+          "atk": 130,
+          "def": 135,
+          "spa": 120,
+          "spd": 125,
+          "spe": 105
+        },
+        "ability": "Overcoat",
+        "megaStone": "Kommonite",
+        "tier": "A",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  },
+  {
+    "id": 0,
+    "name": "volcarona",
+    "nameZh": "火神蛾",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "atk": 60,
+      "def": 85,
+      "spa": 165,
+      "spd": 115,
+      "spe": 110
+    },
+    "abilities": {
+      "normal": [
+        "Drought"
+      ],
+      "hidden": null
+    },
+    "mega": [
+      {
+        "name": "volcarona-mega",
+        "types": [
+          "bug",
+          "fire"
+        ],
+        "baseStats": {
+          "hp": 85,
+          "atk": 60,
+          "def": 85,
+          "spa": 165,
+          "spd": 115,
+          "spe": 110
+        },
+        "ability": "Drought",
+        "megaStone": "Volcaronite",
+        "tier": "S",
+        "isChampionsExclusive": true
+      }
+    ],
+    "sprite": ""
+  }
+]

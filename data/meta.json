@@ -1,0 +1,60 @@
+{
+  "lastUpdated": "2026-06-19T09:44:20.371Z",
+  "format": "champions",
+  "regulation": "M-A",
+  "battleRules": {
+    "format": "Doubles",
+    "level": 50,
+    "teamSize": 6,
+    "bringSize": 4,
+    "timer": "20 minutes",
+    "megaLimit": 1,
+    "noTeracrystallize": true,
+    "noZMoves": true,
+    "noDynamax": true,
+    "itemClause": true,
+    "speciesClause": true
+  },
+  "itemRestrictions": {
+    "regulationMA": {
+      "banned": [
+        "life-orb",
+        "choice-band",
+        "choice-specs",
+        "choice-scarf",
+        "assault-vest",
+        "eviolite"
+      ],
+      "note": "These items are banned in Regulation M-A (launch regulation)"
+    },
+    "regulationMB": {
+      "unbanned": [
+        "choice-band",
+        "choice-specs",
+        "choice-scarf"
+      ],
+      "stillBanned": [
+        "life-orb",
+        "assault-vest",
+        "eviolite"
+      ],
+      "note": "Choice items unbanned in M-B, Life Orb/AV/Eviolite remain banned"
+    }
+  },
+  "statusChanges": {
+    "sleep": {
+      "maxTurns": 2,
+      "note": "Nerfed from 1-3 turns to max 2 turns"
+    },
+    "paralysis": {
+      "speedReduction": 0.5,
+      "fullParaChance": 0.125,
+      "note": "Full paralysis chance reduced to 12.5% (from 25%)"
+    },
+    "freeze": {
+      "maxTurns": 3,
+      "note": "Now guaranteed to thaw within 3 turns"
+    }
+  },
+  "topPokemon": []
+}

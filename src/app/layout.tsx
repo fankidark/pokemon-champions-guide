@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
+import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pokémon Champions 攻略站",
+  title: {
+    default: "Pokémon Champions 攻略站",
+    template: "%s | Pokémon Champions 攻略站",
+  },
   description:
     "Pokémon Champions 竞技对战攻略 — 伤害计算器、配招推荐、队伍构建、Meta 分析",
   keywords: [
@@ -38,7 +42,8 @@ export default function RootLayout({
       className={`${inter.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
+        <Navbar />
+        <div className="flex-1 pb-16 md:pb-0">{children}</div>
       </body>
     </html>
   );
