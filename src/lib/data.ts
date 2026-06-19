@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import * as fs from "fs";
+import * as path from "path";
 
 export interface PokemonData {
   id: number;
@@ -19,20 +19,8 @@ export interface PokemonData {
     hidden: string | null;
   };
   sprite: string;
-  mega?: {
-    name: string;
-    types: string[];
-    baseStats: {
-      hp: number;
-      atk: number;
-      def: number;
-      spa: number;
-      spd: number;
-      spe: number;
-    };
-    ability: string;
-    isNew?: boolean;
-  };
+  hasMega?: boolean;
+  megaForms?: string[];
   usage?: number;
   tier?: string;
 }

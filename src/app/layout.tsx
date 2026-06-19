@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
-const inter = Inter({
+const sans = localFont({
+  src: [
+    { path: "../fonts/inter-latin.woff2", weight: "100 900", style: "normal" },
+  ],
   variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  fallback: ["ui-sans-serif", "system-ui", "-apple-system", "sans-serif"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -52,7 +50,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh-CN"
-      className={`${inter.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${sans.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Navbar />

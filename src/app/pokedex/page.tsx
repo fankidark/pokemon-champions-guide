@@ -3,54 +3,64 @@ import { PokedexClient } from "./pokedex-client";
 
 export const dynamic = "force-static";
 
+// Placeholder usage data until Pikalytics goes live
+const metaUsage: Record<string, { usage: number; tier: string }> = {
+  froslass: { usage: 63.8, tier: "S" },
+  excadrill: { usage: 52.1, tier: "S" },
+  chandelure: { usage: 48.5, tier: "S" },
+  garchomp: { usage: 45.2, tier: "S" },
+  volcarona: { usage: 39.8, tier: "A" },
+  charizard: { usage: 38.2, tier: "A" },
+  metagross: { usage: 36.5, tier: "A" },
+  tyranitar: { usage: 33.7, tier: "A" },
+  greninja: { usage: 32.4, tier: "A" },
+  incineroar: { usage: 31.0, tier: "A" },
+  dragonite: { usage: 29.5, tier: "A" },
+  scizor: { usage: 28.1, tier: "B" },
+  gyarados: { usage: 27.0, tier: "B" },
+  togekiss: { usage: 25.8, tier: "B" },  // not in roster but keep for demo
+  blaziken: { usage: 24.5, tier: "B" },
+  lucario: { usage: 23.2, tier: "B" },
+  dragapult: { usage: 22.0, tier: "B" },
+  kingambit: { usage: 21.5, tier: "B" },
+  annihilape: { usage: 20.8, tier: "B" },
+  gholdengo: { usage: 19.5, tier: "B" },
+  gardevoir: { usage: 18.0, tier: "C" },
+  talonflame: { usage: 17.2, tier: "C" },
+  arcanine: { usage: 16.5, tier: "C" },
+  milotic: { usage: 15.8, tier: "C" },
+  whimsicott: { usage: 14.5, tier: "C" },
+  grimmsnarl: { usage: 13.8, tier: "C" },
+  hatterene: { usage: 12.5, tier: "C" },
+  corviknight: { usage: 11.8, tier: "C" },
+  amoonguss: { usage: 11.0, tier: "C" },  // not in roster
+  pelipper: { usage: 10.5, tier: "C" },
+};
+
 export default function PokedexPage() {
   const allPokemon = getAllPokemon();
-  const allBuilds = getAllBuilds();
-  
-  // Build meta info: assign usage/tier from builds data + champions-patch
-  const metaPokemon = [
-    { name: "froslass", usage: 63.8, tier: "S", isMega: true, isNew: true },
-    { name: "excadrill", usage: 52.1, tier: "S", isMega: true, isNew: true },
-    { name: "chandelure", usage: 48.5, tier: "S", isMega: true, isNew: true },
-    { name: "garchomp", usage: 45.2, tier: "S", isMega: true, isNew: false },
-    { name: "haxorus", usage: 41.3, tier: "A", isMega: true, isNew: true },
-    { name: "volcarona", usage: 39.8, tier: "A", isMega: true, isNew: true },
-    { name: "charizard", usage: 38.2, tier: "A", isMega: true, isNew: false },
-    { name: "metagross", usage: 36.5, tier: "A", isMega: true, isNew: false },
-    { name: "salamence", usage: 35.1, tier: "A", isMega: true, isNew: false },
-    { name: "tyranitar", usage: 33.7, tier: "A", isMega: true, isNew: false },
-    { name: "gengar", usage: 31.2, tier: "A", isMega: true, isNew: false },
-    { name: "lucario", usage: 29.8, tier: "B", isMega: true, isNew: false },
-    { name: "scizor", usage: 28.5, tier: "B", isMega: true, isNew: false },
-    { name: "gyarados", usage: 27.1, tier: "B", isMega: true, isNew: false },
-    { name: "dragonite", usage: 25.6, tier: "B", isMega: false, isNew: false },
-    { name: "talonflame", usage: 24.3, tier: "B", isMega: true, isNew: true },
-    { name: "togekiss", usage: 22.9, tier: "B", isMega: true, isNew: true },
-    { name: "blaziken", usage: 21.4, tier: "B", isMega: true, isNew: false },
-    { name: "arcanine", usage: 19.8, tier: "B", isMega: true, isNew: true },
-    { name: "milotic", usage: 18.2, tier: "C", isMega: true, isNew: true },
-    { name: "ferrothorn", usage: 17.5, tier: "C", isMega: false, isNew: false },
-    { name: "incineroar", usage: 16.8, tier: "C", isMega: false, isNew: false },
-    { name: "amoonguss", usage: 15.2, tier: "C", isMega: false, isNew: false },
-    { name: "whimsicott", usage: 14.1, tier: "C", isMega: false, isNew: false },
-  ];
 
-  // Merge meta info into pokemon data
+  // Merge usage data
   const pokemonWithMeta = allPokemon.map((p) => {
-    const meta = metaPokemon.find((m) => m.name === p.name);
+    const meta = metaUsage[p.name];
     return {
-      ...p,
+      id: p.id,
+      name: p.name,
+      nameZh: p.nameZh,
+      types: p.types,
+      sprite: p.sprite,
       usage: meta?.usage ?? 0,
       tier: meta?.tier ?? "D",
-      isMega: meta?.isMega ?? false,
-      isNew: meta?.isNew ?? false,
+      isMega: p.hasMega ?? false,
+      isNew: (p.megaForms?.length ?? 0) > 0 && !["charizard","blastoise","venusaur","gengar","kangaskhan","alakazam","garchomp","lucario","scizor","tyranitar","metagross","salamence","blaziken","swampert","sceptile","gardevoir","mawile","aggron","medicham","manectric","sharpedo","camerupt","altaria","banette","absol","glalie","lopunny","gallade","aerodactyl","pinsir","gyarados","heracross","houndoom","steelix","ampharos","abomasnow","audino","beedrill","pidgeot","sableye"].includes(p.name),
     };
   });
 
-  // Sort by usage (desc), pokemon with usage first
-  const sorted = pokemonWithMeta.sort((a, b) => b.usage - a.usage);
-  // Only pass top 200 for perf (rest are all tier D / 0 usage)
-  const topPokemon = sorted.slice(0, 200);
+  // Sort: has usage first (desc), then by dex number
+  const sorted = pokemonWithMeta.sort((a, b) => {
+    if (a.usage !== b.usage) return b.usage - a.usage;
+    return a.id - b.id;
+  });
 
-  return <PokedexClient pokemon={topPokemon} />;
+  return <PokedexClient pokemon={sorted} />;
 }
