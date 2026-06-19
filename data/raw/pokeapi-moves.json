@@ -3273,12 +3273,7 @@
     "priority": 3,
     "target": "selected-pokemon",
     "effectChance": 100,
-    "description": "Can only be used as the first move after the user enters battle.  Causes the target to flinch.",
-    "championsChange": {
-      "name": "fake-out",
-      "change": "One-time use per switch-in. Cannot be reselected after first use.",
-      "type": "nerf"
-    }
+    "description": "Can only be used as the first move after the user enters battle.  Causes the target to flinch."
   },
   {
     "id": 253,
@@ -4383,12 +4378,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect.",
-    "championsChange": {
-      "name": "dragon-claw",
-      "change": "Now affected by Sharpness ability (+50% damage)",
-      "type": "buff"
-    }
+    "description": "Inflicts regular damage with no additional effect."
   },
   {
     "id": 338,
@@ -4531,12 +4521,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Has an increased chance for a critical hit.",
-    "championsChange": {
-      "name": "leaf-blade",
-      "change": "Now affected by Sharpness ability (+50% damage)",
-      "type": "buff"
-    }
+    "description": "Has an increased chance for a critical hit."
   },
   {
     "id": 349,
@@ -5212,12 +5197,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Has an increased chance for a critical hit.",
-    "championsChange": {
-      "name": "night-slash",
-      "change": "Now affected by Sharpness ability (+50% damage)",
-      "type": "buff"
-    }
+    "description": "Has an increased chance for a critical hit."
   },
   {
     "id": 401,
@@ -5269,12 +5249,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect.",
-    "championsChange": {
-      "name": "x-scissor",
-      "change": "Now affected by Sharpness ability (+50% damage)",
-      "type": "buff"
-    }
+    "description": "Inflicts regular damage with no additional effect."
   },
   {
     "id": 405,
@@ -5495,12 +5470,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Has an increased chance for a critical hit.",
-    "championsChange": {
-      "name": "shadow-claw",
-      "change": "Now affected by Sharpness ability (+50% damage)",
-      "type": "buff"
-    }
+    "description": "Has an increased chance for a critical hit."
   },
   {
     "id": 422,
