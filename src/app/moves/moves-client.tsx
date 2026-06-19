@@ -3,130 +3,130 @@
 import { useState, useMemo } from "react";
 
 const TYPE_COLORS: Record<string, string> = {
-  normal: "bg-gray-400", fire: "bg-orange-500", water: "bg-blue-500",
+  normal: "bg-gray-500", fire: "bg-orange-500", water: "bg-blue-500",
   electric: "bg-yellow-400", grass: "bg-green-500", ice: "bg-cyan-300",
   fighting: "bg-red-700", poison: "bg-purple-500", ground: "bg-amber-600",
   flying: "bg-indigo-300", psychic: "bg-pink-500", bug: "bg-lime-500",
   rock: "bg-yellow-700", ghost: "bg-purple-700", dragon: "bg-indigo-600",
   dark: "bg-gray-700", steel: "bg-gray-400", fairy: "bg-pink-300",
 };
-
-const CATEGORY_ICONS: Record<string, string> = {
-  physical: "💥",
-  special: "✨",
-  status: "📊",
+const TYPE_NAMES: Record<string, string> = {
+  normal: "一般", fire: "火", water: "水", electric: "电", grass: "草",
+  ice: "冰", fighting: "格斗", poison: "毒", ground: "地面", flying: "飞行",
+  psychic: "超能", bug: "虫", rock: "岩石", ghost: "幽灵", dragon: "龙",
+  dark: "恶", steel: "钢", fairy: "妖精",
+};
+const CAT_ICONS: Record<string, string> = {
+  physical: "⚔️", special: "✨", status: "🔄",
 };
 
-interface MoveItem {
-  id: number;
-  name: string;
-  type: string;
-  category: string;
-  power: number | null;
-  accuracy: number | null;
-  pp: number;
-  priority: number;
-  description: string;
-  championsChange?: string;
+interface Move {
+  id: number; name: string; type: string; category: string;
+  power: number | null; accuracy: number | null; pp: number;
+  priority: number; description: string;
+  nameZh?: string; descZh?: string; tip?: string;
+  championsChange?: boolean | string;
 }
 
-export function MovesClient({ moves }: { moves: MoveItem[] }) {
+export function MovesClient({ moves }: { moves: Move[] }) {
   const [search, setSearch] = useState("");
-  const [typeFilter, setTypeFilter] = useState<string | null>(null);
-  const [catFilter, setCatFilter] = useState<string | null>(null);
-  const [changesOnly, setChangesOnly] = useState(false);
+  const [typeFilter, setTypeFilter] = useState("");
+  const [catFilter, setCatFilter] = useState("");
+  const [showTips, setShowTips] = useState(false);
+  const [champOnly, setChampOnly] = useState(false);
 
   const filtered = useMemo(() => {
     return moves.filter((m) => {
-      if (search && !m.name.includes(search.toLowerCase())) return false;
+      if (search && !m.name.includes(search.toLowerCase()) && 
+          !(m.nameZh && m.nameZh.includes(search))) return false;
       if (typeFilter && m.type !== typeFilter) return false;
       if (catFilter && m.category !== catFilter) return false;
-      if (changesOnly && !m.championsChange) return false;
+      if (champOnly && !m.championsChange) return false;
       return true;
     });
-  }, [moves, search, typeFilter, catFilter, changesOnly]);
+  }, [moves, search, typeFilter, catFilter, champOnly]);
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-primary mb-6">⚡ 技能百科</h1>
-
-      <div className="flex flex-wrap gap-3 mb-6">
+    <div className="space-y-4">
+      {/* Filters */}
+      <div className="flex flex-wrap gap-2">
         <input
           type="text"
-          placeholder="搜索招式..."
+          placeholder="搜索招式（中文/英文）..."
+          className="px-3 py-2 rounded-lg bg-card border border-border text-sm flex-1 min-w-48"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
         />
-        <select
-          value={typeFilter || ""}
-          onChange={(e) => setTypeFilter(e.target.value || null)}
-          className="px-3 py-2 rounded-lg bg-card border border-border text-foreground"
-        >
+        <select className="px-3 py-2 rounded-lg bg-card border border-border text-sm"
+          value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
           <option value="">全部属性</option>
-          {Object.keys(TYPE_COLORS).map((t) => (
-            <option key={t} value={t}>{t}</option>
-          ))}
+          {Object.entries(TYPE_NAMES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
         </select>
-        <select
-          value={catFilter || ""}
-          onChange={(e) => setCatFilter(e.target.value || null)}
-          className="px-3 py-2 rounded-lg bg-card border border-border text-foreground"
-        >
+        <select className="px-3 py-2 rounded-lg bg-card border border-border text-sm"
+          value={catFilter} onChange={(e) => setCatFilter(e.target.value)}>
           <option value="">全部分类</option>
           <option value="physical">物理</option>
           <option value="special">特殊</option>
           <option value="status">变化</option>
         </select>
         <button
-          onClick={() => setChangesOnly(!changesOnly)}
-          className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-            changesOnly ? "bg-primary text-primary-foreground" : "bg-card border border-border text-muted-foreground"
-          }`}
-        >
-          🔥 Champions 改动
+          className={`px-3 py-2 rounded-lg text-sm font-medium transition ${showTips ? "bg-primary text-primary-foreground" : "bg-card border border-border"}`}
+          onClick={() => setShowTips(!showTips)}>
+          💡 使用建议
+        </button>
+        <button
+          className={`px-3 py-2 rounded-lg text-sm font-medium transition ${champOnly ? "bg-orange-500 text-white" : "bg-card border border-border"}`}
+          onClick={() => setChampOnly(!champOnly)}>
+          🔥 Champions改动
         </button>
       </div>
 
-      <div className="text-sm text-muted-foreground mb-4">共 {filtered.length} 个招式</div>
+      <p className="text-sm text-primary font-medium">共 {filtered.length} 个招式</p>
 
+      {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-border text-left text-muted-foreground">
+            <tr className="text-left text-muted-foreground border-b border-border">
               <th className="py-2 px-2">招式名</th>
               <th className="py-2 px-2">属性</th>
               <th className="py-2 px-2">分类</th>
-              <th className="py-2 px-2">威力</th>
-              <th className="py-2 px-2">命中</th>
-              <th className="py-2 px-2">PP</th>
-              <th className="py-2 px-2 hidden md:table-cell">Champions 改动</th>
+              <th className="py-2 px-2 text-right">威力</th>
+              <th className="py-2 px-2 text-right">命中</th>
+              <th className="py-2 px-2 text-right">PP</th>
+              {showTips && <th className="py-2 px-2">使用建议</th>}
             </tr>
           </thead>
           <tbody>
             {filtered.slice(0, 100).map((m) => (
-              <tr key={m.id} className={`border-b border-border/50 hover:bg-accent/30 ${m.championsChange ? "bg-yellow-500/5" : ""}`}>
-                <td className="py-2 px-2 font-medium">{m.name}</td>
+              <tr key={m.id} className="border-b border-border/50 hover:bg-card/50 transition">
                 <td className="py-2 px-2">
-                  <span className={`px-1.5 py-0.5 text-[10px] font-medium text-white rounded ${TYPE_COLORS[m.type]}`}>
-                    {m.type}
+                  <div className="font-medium">{m.nameZh || m.name}</div>
+                  {m.nameZh && <div className="text-xs text-muted-foreground">{m.name}</div>}
+                  {m.descZh && <div className="text-xs text-muted-foreground mt-0.5">{m.descZh}</div>}
+                </td>
+                <td className="py-2 px-2">
+                  <span className={`px-2 py-0.5 text-xs text-white rounded ${TYPE_COLORS[m.type]}`}>
+                    {TYPE_NAMES[m.type]}
                   </span>
                 </td>
-                <td className="py-2 px-2">{CATEGORY_ICONS[m.category]} {m.category}</td>
-                <td className="py-2 px-2 font-mono">{m.power ?? "—"}</td>
-                <td className="py-2 px-2 font-mono">{m.accuracy ?? "—"}</td>
-                <td className="py-2 px-2 font-mono">{m.pp}</td>
-                <td className="py-2 px-2 text-xs text-yellow-400 hidden md:table-cell">
-                  {m.championsChange || ""}
+                <td className="py-2 px-2">
+                  <span className="text-xs">{CAT_ICONS[m.category]} {m.category === "physical" ? "物理" : m.category === "special" ? "特殊" : "变化"}</span>
                 </td>
+                <td className="py-2 px-2 text-right font-mono font-bold">{m.power || "-"}</td>
+                <td className="py-2 px-2 text-right font-mono">{m.accuracy || "-"}</td>
+                <td className="py-2 px-2 text-right font-mono">{m.pp}</td>
+                {showTips && (
+                  <td className="py-2 px-2 text-xs text-amber-300 max-w-xs">{m.tip ? `💡 ${m.tip}` : ""}</td>
+                )}
               </tr>
             ))}
           </tbody>
         </table>
+        {filtered.length > 100 && (
+          <p className="text-sm text-muted-foreground text-center mt-4">显示前 100 条，请使用搜索缩小范围</p>
+        )}
       </div>
-      {filtered.length > 100 && (
-        <p className="text-center text-muted-foreground py-4 text-sm">显示前 100 条结果，请使用搜索缩小范围</p>
-      )}
-    </main>
+    </div>
   );
 }

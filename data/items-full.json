@@ -1,0 +1,363 @@
+{
+  "hold_items": [
+    {
+      "name": "leftovers",
+      "nameZh": "吃剩的东西",
+      "category": "回复",
+      "desc": "每回合恢复最大HP的1/16",
+      "tip": "最通用的持久战道具，适合坦克型和需要多回合存活的宝可梦",
+      "banned": null
+    },
+    {
+      "name": "focus-sash",
+      "nameZh": "气势披带",
+      "category": "保护",
+      "desc": "满HP时受到致命伤害保留1HP（一次性）",
+      "tip": "脆皮高速攻手/辅助手必备，保证至少行动一次。顺风手标配",
+      "banned": null
+    },
+    {
+      "name": "life-orb",
+      "nameZh": "生命宝珠",
+      "category": "强化",
+      "desc": "招式伤害×1.3，每次攻击损失最大HP的10%",
+      "tip": "自由切招+30%增伤。适合打击面广的输出手，但续航差",
+      "banned": null
+    },
+    {
+      "name": "choice-band",
+      "nameZh": "讲究头带",
+      "category": "讲究",
+      "desc": "攻击×1.5，但只能使用一个招式",
+      "tip": "纯物攻爆发手首选，但锁招风险高。适合有U-turn的宝可梦随时换出",
+      "banned": null
+    },
+    {
+      "name": "choice-specs",
+      "nameZh": "讲究眼镜",
+      "category": "讲究",
+      "desc": "特攻×1.5，但只能使用一个招式",
+      "tip": "纯特攻手爆发首选。锁招后被免疫属性上场会很被动",
+      "banned": null
+    },
+    {
+      "name": "choice-scarf",
+      "nameZh": "讲究围巾",
+      "category": "讲究",
+      "desc": "速度×1.5，但只能使用一个招式",
+      "tip": "先手突袭/收割利器。可让中速宝可梦超越高速对手",
+      "banned": null
+    },
+    {
+      "name": "assault-vest",
+      "nameZh": "突击背心",
+      "category": "耐久",
+      "desc": "特防×1.5，但无法使用变化技",
+      "tip": "物攻坦克补特防的最佳选择。炽焰咆哮虎/班基拉斯常用",
+      "banned": null
+    },
+    {
+      "name": "expert-belt",
+      "nameZh": "达人带",
+      "category": "强化",
+      "desc": "效果拔群时伤害×1.2",
+      "tip": "打击面广的宝可梦福音，不暴露锁招信息且无副作用",
+      "banned": null
+    },
+    {
+      "name": "white-herb",
+      "nameZh": "白色香草",
+      "category": "保护",
+      "desc": "能力下降时恢复一次（一次性）",
+      "tip": "配合近身战/逆鳞等降能力招式使用，或对抗威吓",
+      "banned": null
+    },
+    {
+      "name": "mental-herb",
+      "nameZh": "心灵香草",
+      "category": "保护",
+      "desc": "解除挑衅/再来一次等限制（一次性）",
+      "tip": "辅助手反挑衅必备，保证顺风/空间等关键技能展开",
+      "banned": null
+    },
+    {
+      "name": "focus-band",
+      "nameZh": "气合头带",
+      "category": "保护",
+      "desc": "受到致命伤害时有10%几率保留1HP",
+      "tip": "赌博道具，正式对战不推荐。气势披带的下位替代",
+      "banned": null
+    },
+    {
+      "name": "scope-lens",
+      "nameZh": "焦点镜",
+      "category": "强化",
+      "desc": "暴击率+1级",
+      "tip": "配合高暴击率招式（夜斩/交叉毒击等）叠加暴击概率",
+      "banned": null
+    },
+    {
+      "name": "wide-lens",
+      "nameZh": "广角镜",
+      "category": "强化",
+      "desc": "命中率×1.1",
+      "tip": "解决催眠术(75)/水炮(80)等不稳定招式的命中问题",
+      "banned": null
+    },
+    {
+      "name": "muscle-band",
+      "nameZh": "力量头带",
+      "category": "强化",
+      "desc": "物理招式威力×1.1",
+      "tip": "温和的物攻增幅，不如生命宝珠但无副作用",
+      "banned": null
+    },
+    {
+      "name": "wise-glasses",
+      "nameZh": "博识眼镜",
+      "category": "强化",
+      "desc": "特殊招式威力×1.1",
+      "tip": "温和的特攻增幅，比讲究眼镜灵活但增幅小",
+      "banned": null
+    },
+    {
+      "name": "quick-claw",
+      "nameZh": "先制之爪",
+      "category": "速度",
+      "desc": "20%几率先制行动",
+      "tip": "慢速宝可梦的赌博选择，不如围巾稳定但不锁招",
+      "banned": null
+    },
+    {
+      "name": "kings-rock",
+      "nameZh": "王者之证",
+      "category": "强化",
+      "desc": "攻击时10%几率使对手畏缩",
+      "tip": "多段攻击（岩崩/骨棒等）配合效果叠加",
+      "banned": null
+    },
+    {
+      "name": "iron-ball",
+      "nameZh": "黑铁球",
+      "category": "特殊",
+      "desc": "速度减半，飞行/浮游也可被地面招式命中",
+      "tip": "空间队慢速手+戏法交换给对手。或让Rotom 被地面打到触发弱保",
+      "banned": null
+    },
+    {
+      "name": "shed-shell",
+      "nameZh": "洁净之符",
+      "category": "保护",
+      "desc": "持有者可无视封锁效果自由交换",
+      "tip": "对抗影踏/磁力等特性锁定，确保可以换人",
+      "banned": null
+    },
+    {
+      "name": "shell-bell",
+      "nameZh": "贝壳之铃",
+      "category": "回复",
+      "desc": "攻击造成伤害的1/8回复HP",
+      "tip": "回复量偏低，不如吃剩的东西稳定。高威力招式回复尚可",
+      "banned": null
+    },
+    {
+      "name": "big-root",
+      "nameZh": "大根茎",
+      "category": "回复",
+      "desc": "吸取系招式回复量×1.3",
+      "tip": "配合终极吸取/力量吸取的续航型选择",
+      "banned": null
+    },
+    {
+      "name": "bright-powder",
+      "nameZh": "光粉",
+      "category": "闪避",
+      "desc": "降低对手命中率",
+      "tip": "运气道具，正式对战非主流但偶尔翻盘",
+      "banned": null
+    },
+    {
+      "name": "light-clay",
+      "nameZh": "光之粘土",
+      "category": "辅助",
+      "desc": "光墙/反射壁持续8回合（原5回合）",
+      "tip": "双壁辅助手标配。8回合屏障为队友提供强力保护",
+      "banned": null
+    },
+    {
+      "name": "heat-rock",
+      "nameZh": "炽热岩石",
+      "category": "天气",
+      "desc": "晴天持续8回合",
+      "tip": "晴天队核心道具。延长日照为火系/叶绿素队友提供更多回合",
+      "banned": null
+    },
+    {
+      "name": "damp-rock",
+      "nameZh": "潮湿岩石",
+      "category": "天气",
+      "desc": "雨天持续8回合",
+      "tip": "雨队核心道具。延长雨天为悠游自如/水系队友提供更多回合",
+      "banned": null
+    },
+    {
+      "name": "smooth-rock",
+      "nameZh": "沙沙岩石",
+      "category": "天气",
+      "desc": "沙暴持续8回合",
+      "tip": "沙暴队核心道具。延长沙暴配合沙隐/沙冲特性",
+      "banned": null
+    },
+    {
+      "name": "icy-rock",
+      "nameZh": "冰冷岩石",
+      "category": "天气",
+      "desc": "冰雹持续8回合",
+      "tip": "雪景队核心道具。延长雪景配合雪隐/极光幕",
+      "banned": null
+    },
+    {
+      "name": "metronome",
+      "nameZh": "节拍器",
+      "category": "强化",
+      "desc": "连续使用同一招式威力递增（最高×2）",
+      "tip": "锁招系列（逆鳞/花瓣舞）或单一输出手可考虑",
+      "banned": null
+    },
+    {
+      "name": "soft-sand",
+      "nameZh": "柔软沙子",
+      "category": "属性强化",
+      "desc": "地面系招式威力×1.2",
+      "tip": "烈咬陆鲨等地面系常用，稳定增伤无副作用",
+      "banned": null
+    }
+  ],
+  "berries": [
+    {
+      "name": "sitrus-berry",
+      "nameZh": "文柚果",
+      "category": "树果",
+      "desc": "HP≤50%时回复最大HP的1/4",
+      "tip": "最通用的一次性回复。坦克手首选，一次回复量比吃剩的东西多"
+    },
+    {
+      "name": "lum-berry",
+      "nameZh": "木子果",
+      "category": "树果",
+      "desc": "治愈任何异常状态（一次性）",
+      "tip": "龙舞手防催眠/烧伤，保证安全强化一次"
+    },
+    {
+      "name": "aguav-berry",
+      "nameZh": "棱瓜果",
+      "category": "树果",
+      "desc": "HP≤25%时回复最大HP的1/3",
+      "tip": "配合混乱果性格（减特攻的物攻手等）大量回复"
+    },
+    {
+      "name": "wiki-berry",
+      "nameZh": "巫果",
+      "category": "树果",
+      "desc": "HP≤25%时回复最大HP的1/3",
+      "tip": "33%回复量巨大，配合正确性格使用避免混乱"
+    },
+    {
+      "name": "figy-berry",
+      "nameZh": "勿花果",
+      "category": "树果",
+      "desc": "HP≤25%时回复最大HP的1/3",
+      "tip": "固执/爽朗物攻手的回复果首选"
+    },
+    {
+      "name": "chesto-berry",
+      "nameZh": "零余果",
+      "category": "树果",
+      "desc": "治愈睡眠状态",
+      "tip": "配合休息（Rest）使用，睡眠后立即醒来满血"
+    },
+    {
+      "name": "roseli-berry",
+      "nameZh": "洛玫果",
+      "category": "树果",
+      "desc": "受到妖精技能伤害减半（一次性）",
+      "tip": "龙系对抗妖精的保险。烈咬陆鲨等可防被月亮之力秒杀"
+    },
+    {
+      "name": "shuca-berry",
+      "nameZh": "番荔果",
+      "category": "树果",
+      "desc": "受到地面技能伤害减半（一次性）",
+      "tip": "火/电/钢系对抗地面弱点的保险"
+    },
+    {
+      "name": "yache-berry",
+      "nameZh": "莓榴果",
+      "category": "树果",
+      "desc": "受到冰系技能伤害减半（一次性）",
+      "tip": "龙/地面/飞行系对抗冰系4倍弱点的保命道具"
+    }
+  ],
+  "mega_stones_top": [
+    {
+      "name": "garchompite",
+      "nameZh": "烈咬陆鲨进化石",
+      "pokemon": "烈咬陆鲨",
+      "desc": "Mega 进化：攻防提升，速度略降"
+    },
+    {
+      "name": "staraptorite",
+      "nameZh": "姆克鹰进化石",
+      "pokemon": "姆克鹰",
+      "desc": "Mega 进化：飞行/格斗，获得舍身特性"
+    },
+    {
+      "name": "metagrossite",
+      "nameZh": "巨金怪进化石",
+      "pokemon": "巨金怪",
+      "desc": "Mega 进化：全面提升，获得硬爪特性"
+    },
+    {
+      "name": "charizardite-y",
+      "nameZh": "喷火龙进化石Y",
+      "pokemon": "喷火龙",
+      "desc": "Mega Y：自动日照，特攻大幅提升"
+    },
+    {
+      "name": "charizardite-x",
+      "nameZh": "喷火龙进化石X",
+      "pokemon": "喷火龙",
+      "desc": "Mega X：变为火/龙，物攻大幅提升"
+    },
+    {
+      "name": "tyranitarite",
+      "nameZh": "班基拉斯进化石",
+      "pokemon": "班基拉斯",
+      "desc": "Mega 进化：双耐大幅提升"
+    },
+    {
+      "name": "greninjite",
+      "nameZh": "甲贺忍蛙进化石",
+      "pokemon": "甲贺忍蛙",
+      "desc": "Mega 进化：速度特攻提升，保留变幻自在"
+    },
+    {
+      "name": "excadrite",
+      "nameZh": "龙头地鼠进化石",
+      "pokemon": "龙头地鼠",
+      "desc": "Mega 进化：攻速提升"
+    },
+    {
+      "name": "chandelurite",
+      "nameZh": "水晶灯火灵进化石",
+      "pokemon": "水晶灯火灵",
+      "desc": "Mega 进化：特攻大幅提升"
+    },
+    {
+      "name": "gyaradosite",
+      "nameZh": "暴鲤龙进化石",
+      "pokemon": "暴鲤龙",
+      "desc": "Mega 进化：变为水/恶，物攻大幅提升"
+    }
+  ]
+}

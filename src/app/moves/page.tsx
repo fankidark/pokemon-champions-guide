@@ -1,33 +1,47 @@
 import { getAllMoves } from "@/lib/data";
 import { MovesClient } from "./moves-client";
+import * as fs from "fs";
+import * as path from "path";
 
 export const dynamic = "force-static";
 
-// Champions-specific move changes
-const championsChanges: Record<string, string> = {
-  "dragon-claw": "利刃特性：+50% 威力",
-  "shadow-claw": "利刃特性：+50% 威力",
-  "leaf-blade": "利刃特性：+50% 威力",
-  "psycho-cut": "利刃特性：+50% 威力",
-  "sacred-sword": "利刃特性：+50% 威力",
-  "night-slash": "利刃特性：+50% 威力",
-  "cross-poison": "利刃特性：+50% 威力",
-  "air-cutter": "利刃特性：+50% 威力",
-  "fake-out": "每次上场只能使用一次（不可重复选择）",
-  "sleep-powder": "最多睡 2 回合",
-  "spore": "最多睡 2 回合",
-  "hypnosis": "最多睡 2 回合",
-  "thunder-wave": "麻痹完全麻痹率降至 12.5%",
-};
+function loadMovesZh(): Record<string, { nameZh: string; desc: string; tip: string }> {
+  try {
+    const raw = fs.readFileSync(path.join(process.cwd(), "data", "moves-zh.json"), "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return {};
+  }
+}
 
 export default function MovesPage() {
-  const allMoves = getAllMoves();
-  
-  // Add champions changes flag
-  const movesWithChanges = allMoves.map((m) => ({
-    ...m,
-    championsChange: championsChanges[m.name] || undefined,
-  }));
+  const moves = getAllMoves();
+  const movesZh = loadMovesZh();
 
-  return <MovesClient moves={movesWithChanges} />;
+  // Merge Chinese data into moves
+  const enrichedMoves = moves.map((m) => {
+    const zh = movesZh[m.name];
+    return {
+      ...m,
+      nameZh: zh?.nameZh || undefined,
+      descZh: zh?.desc || undefined,
+      tip: zh?.tip || undefined,
+    };
+  });
+
+  // Sort: moves with Chinese names first (more important competitive moves)
+  enrichedMoves.sort((a, b) => {
+    if (a.nameZh && !b.nameZh) return -1;
+    if (!a.nameZh && b.nameZh) return 1;
+    return 0;
+  });
+
+  return (
+    <main className="max-w-6xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">
+        <span className="text-primary">⚡</span> 技能百科
+      </h1>
+      <MovesClient moves={enrichedMoves} />
+    </main>
+  );
 }
