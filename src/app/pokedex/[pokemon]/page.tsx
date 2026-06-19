@@ -1,160 +1,135 @@
-import { Metadata } from "next";
+import { getAllPokemon, getBuildsByPokemon, getNamesZh } from "@/lib/data";
 import { notFound } from "next/navigation";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
-// This will be SSG with generateStaticParams in production
-// For now, a placeholder that shows layout structure
+export const dynamic = "force-static";
 
-interface Props {
-  params: Promise<{ pokemon: string }>;
+export async function generateStaticParams() {
+  const pokemon = getAllPokemon();
+  // Generate pages for top 50 pokemon
+  return pokemon.slice(0, 50).map((p) => ({ pokemon: p.name }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { pokemon } = await params;
-  return {
-    title: `${pokemon} | 图鉴`,
-  };
-}
-
-// Placeholder stat data
-const SAMPLE_DATA: Record<string, any> = {
-  garchomp: {
-    id: 445, nameZh: "烈咬陆鲨", types: ["dragon", "ground"],
-    baseStats: { hp: 108, atk: 130, def: 95, spa: 80, spd: 85, spe: 102 },
-    abilities: { normal: ["Sand Veil"], hidden: "Rough Skin" },
-    mega: {
-      name: "Garchomp-Mega", types: ["dragon", "ground"],
-      baseStats: { hp: 108, atk: 170, def: 115, spa: 120, spd: 95, spe: 92 },
-      ability: "Sand Force",
-    },
-  },
-  froslass: {
-    id: 478, nameZh: "雪妖女", types: ["ice", "ghost"],
-    baseStats: { hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110 },
-    abilities: { normal: ["Snow Cloak"], hidden: "Cursed Body" },
-    mega: {
-      name: "Froslass-Mega", types: ["ice", "ghost"],
-      baseStats: { hp: 70, atk: 80, def: 90, spa: 130, spd: 110, spe: 130 },
-      ability: "Cursed Body",
-      isChampionsExclusive: true,
-    },
-  },
+const TYPE_COLORS: Record<string, string> = {
+  normal: "bg-gray-400", fire: "bg-orange-500", water: "bg-blue-500",
+  electric: "bg-yellow-400", grass: "bg-green-500", ice: "bg-cyan-300",
+  fighting: "bg-red-700", poison: "bg-purple-500", ground: "bg-amber-600",
+  flying: "bg-indigo-300", psychic: "bg-pink-500", bug: "bg-lime-500",
+  rock: "bg-yellow-700", ghost: "bg-purple-700", dragon: "bg-indigo-600",
+  dark: "bg-gray-700", steel: "bg-gray-400", fairy: "bg-pink-300",
 };
 
-function StatBar({ label, value, max = 200 }: { label: string; value: number; max?: number }) {
-  const percentage = (value / max) * 100;
-  const color =
-    value >= 130 ? "bg-red-500" :
-    value >= 100 ? "bg-orange-400" :
-    value >= 80 ? "bg-yellow-400" :
-    value >= 60 ? "bg-green-400" :
-    "bg-blue-400";
+const TYPE_NAMES: Record<string, string> = {
+  normal: "一般", fire: "火", water: "水", electric: "电", grass: "草",
+  ice: "冰", fighting: "格斗", poison: "毒", ground: "地面", flying: "飞行",
+  psychic: "超能", bug: "虫", rock: "岩石", ghost: "幽灵", dragon: "龙",
+  dark: "恶", steel: "钢", fairy: "妖精",
+};
+
+const STAT_NAMES: Record<string, string> = {
+  hp: "HP", atk: "攻击", def: "防御", spa: "特攻", spd: "特防", spe: "速度",
+};
+
+const STAT_COLORS: Record<string, string> = {
+  hp: "bg-red-500", atk: "bg-orange-500", def: "bg-yellow-500",
+  spa: "bg-blue-500", spd: "bg-green-500", spe: "bg-pink-500",
+};
+
+export default async function PokemonDetailPage({
+  params,
+}: {
+  params: Promise<{ pokemon: string }>;
+}) {
+  const { pokemon: name } = await params;
+  const allPokemon = getAllPokemon();
+  const pokemon = allPokemon.find((p) => p.name === name);
+  
+  if (!pokemon) return notFound();
+  
+  const namesZh = getNamesZh();
+  const builds = getBuildsByPokemon(name);
+  const zhName = namesZh[name] || name;
+  const stats = pokemon.baseStats;
+  const bst = Object.values(stats).reduce((a, b) => a + b, 0);
 
   return (
-    <div className="flex items-center gap-2">
-      <span className="w-10 text-xs text-muted-foreground text-right">{label}</span>
-      <span className="w-8 text-xs text-right font-mono">{value}</span>
-      <div className="flex-1 h-3 bg-secondary rounded-full overflow-hidden">
-        <div className={`h-full ${color} rounded-full transition-all`} style={{ width: `${percentage}%` }} />
-      </div>
-    </div>
-  );
-}
+    <main className="max-w-4xl mx-auto px-4 py-8">
+      <Link href="/pokedex" className="text-sm text-muted-foreground hover:text-primary mb-4 inline-block">
+        ← 返回图鉴
+      </Link>
 
-export default async function PokemonDetailPage({ params }: Props) {
-  const { pokemon: pokemonSlug } = await params;
-  const data = SAMPLE_DATA[pokemonSlug];
-
-  if (!data) {
-    // For now show a placeholder for unknown Pokemon
-    return (
-      <main className="min-h-screen p-4 md:p-8 max-w-4xl mx-auto">
-        <h1 className="text-2xl font-bold mb-4">{pokemonSlug}</h1>
-        <p className="text-muted-foreground">详细数据正在建设中...</p>
-      </main>
-    );
-  }
-
-  const stats = data.baseStats;
-  const bst = Object.values(stats).reduce((a: number, b: any) => a + b, 0);
-
-  return (
-    <main className="min-h-screen p-4 md:p-8 max-w-4xl mx-auto">
       {/* Header */}
-      <div className="flex items-start gap-6 mb-8">
-        <img
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`}
-          alt={data.nameZh}
-          className="w-48 h-48 object-contain"
-        />
+      <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={pokemon.sprite} alt={zhName} className="w-48 h-48 object-contain" />
         <div>
-          <h1 className="text-3xl font-bold">{data.nameZh}</h1>
-          <p className="text-muted-foreground">#{data.id} · {pokemonSlug}</p>
-          <div className="flex gap-2 mt-3">
-            {data.types.map((t: string) => (
-              <Badge key={t} className="capitalize">{t}</Badge>
+          <div className="flex items-center gap-3">
+            <h1 className="text-3xl font-bold">{zhName}</h1>
+            <span className="text-lg text-muted-foreground">#{pokemon.id}</span>
+          </div>
+          <div className="flex gap-2 mt-2">
+            {pokemon.types.map((t) => (
+              <span key={t} className={`px-3 py-1 text-sm font-medium text-white rounded-lg ${TYPE_COLORS[t]}`}>
+                {TYPE_NAMES[t]}
+              </span>
             ))}
           </div>
-          <div className="mt-3 text-sm">
-            <span className="text-muted-foreground">特性: </span>
-            {data.abilities.normal.join(" / ")}
-            {data.abilities.hidden && (
-              <span className="text-purple-400"> ({data.abilities.hidden})</span>
-            )}
+          <div className="mt-3 text-sm text-muted-foreground">
+            <span>特性: {pokemon.abilities.normal.join(" / ")}</span>
+            {pokemon.abilities.hidden && <span> | 隐藏: {pokemon.abilities.hidden}</span>}
           </div>
         </div>
       </div>
 
       {/* Base Stats */}
-      <Card className="mb-6">
-        <CardHeader>
-          <CardTitle className="text-sm">种族值 (BST: {bst})</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          <StatBar label="HP" value={stats.hp} />
-          <StatBar label="攻击" value={stats.atk} />
-          <StatBar label="防御" value={stats.def} />
-          <StatBar label="特攻" value={stats.spa} />
-          <StatBar label="特防" value={stats.spd} />
-          <StatBar label="速度" value={stats.spe} />
-        </CardContent>
-      </Card>
+      <section className="mb-8">
+        <h2 className="text-xl font-bold mb-4">种族值 <span className="text-sm text-muted-foreground font-normal">总计 {bst}</span></h2>
+        <div className="space-y-2">
+          {(Object.entries(stats) as [string, number][]).map(([key, val]) => (
+            <div key={key} className="flex items-center gap-3">
+              <span className="w-12 text-sm text-muted-foreground">{STAT_NAMES[key]}</span>
+              <span className="w-8 text-sm font-mono font-bold text-right">{val}</span>
+              <div className="flex-1 h-3 bg-border rounded-full overflow-hidden">
+                <div
+                  className={`h-full rounded-full ${STAT_COLORS[key]}`}
+                  style={{ width: `${(val / 200) * 100}%` }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* Mega Evolution */}
-      {data.mega && (
-        <Card className="mb-6 border-purple-500/30">
-          <CardHeader>
-            <CardTitle className="text-sm flex items-center gap-2">
-              Mega 进化
-              {data.mega.isChampionsExclusive && (
-                <Badge className="bg-purple-500/20 text-purple-300 text-[10px]">Champions 限定</Badge>
-              )}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-2">
-            <p className="text-xs text-muted-foreground mb-3">
-              特性: <span className="text-foreground">{data.mega.ability}</span>
-            </p>
-            <StatBar label="HP" value={data.mega.baseStats.hp} />
-            <StatBar label="攻击" value={data.mega.baseStats.atk} />
-            <StatBar label="防御" value={data.mega.baseStats.def} />
-            <StatBar label="特攻" value={data.mega.baseStats.spa} />
-            <StatBar label="特防" value={data.mega.baseStats.spd} />
-            <StatBar label="速度" value={data.mega.baseStats.spe} />
-          </CardContent>
-        </Card>
+      {/* Builds */}
+      {builds && (
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-4">配招推荐</h2>
+          <div className="space-y-4">
+            {builds.builds.map((build, i) => (
+              <div key={i} className="p-4 rounded-lg bg-card border border-border">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-bold">{build.name}</h3>
+                  <span className="text-sm text-muted-foreground">{build.item}</span>
+                </div>
+                <div className="grid grid-cols-6 gap-1 mb-3">
+                  {(["hp", "atk", "def", "spa", "spd", "spe"] as const).map((stat) => (
+                    <div key={stat} className="text-center">
+                      <div className="text-[10px] text-muted-foreground uppercase">{stat}</div>
+                      <div className="text-sm font-mono font-bold">{build.sp[stat]}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {build.moves.map((m) => (
+                    <span key={m} className="px-2 py-0.5 text-xs bg-accent rounded">{m}</span>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground">{build.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
-
-      {/* Builds section placeholder */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-sm">推荐配置</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground">配招数据正在建设中...</p>
-        </CardContent>
-      </Card>
     </main>
   );
 }

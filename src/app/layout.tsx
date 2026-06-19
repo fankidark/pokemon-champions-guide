@@ -29,6 +29,19 @@ export const metadata: Metadata = {
     "VGC",
     "Mega进化",
   ],
+  manifest: "/manifest.json",
+  themeColor: "#fbbf24",
+  openGraph: {
+    title: "Pokémon Champions 攻略站",
+    description: "成为真正的冠军 — 伤害计算 · 配招推荐 · 队伍构建 · Meta 分析",
+    type: "website",
+    locale: "zh_CN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pokémon Champions 攻略站",
+    description: "成为真正的冠军 — 伤害计算 · 配招推荐 · 队伍构建 · Meta 分析",
+  },
 };
 
 export default function RootLayout({

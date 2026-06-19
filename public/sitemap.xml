@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:s="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/</s:loc><s:priority>1.0</s:priority></s:url>
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/pokedex</s:loc><s:priority>0.9</s:priority></s:url>
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/calc</s:loc><s:priority>0.9</s:priority></s:url>
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/builds</s:loc><s:priority>0.9</s:priority></s:url>
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/moves</s:loc><s:priority>0.8</s:priority></s:url>
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/items</s:loc><s:priority>0.8</s:priority></s:url>
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/teams</s:loc><s:priority>0.7</s:priority></s:url>
+  <s:url><s:loc>https://pokemon-champions-guide.vercel.app/meta</s:loc><s:priority>0.8</s:priority></s:url>
+</urlset>

@@ -1,0 +1,49 @@
+name: Daily Data Update
+
+on:
+  schedule:
+    # 每天 UTC 00:00 (北京时间 08:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Fetch PokeAPI data
+        run: npx tsx scripts/fetch-pokeapi.ts
+        
+      - name: Fetch Pikalytics usage data
+        run: npx tsx scripts/fetch-pikalytics.ts
+        continue-on-error: true  # Pikalytics 可能暂无数据
+        
+      - name: Build merged data
+        run: npx tsx scripts/build-data.ts
+        
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet data/ || echo "changed=true" >> $GITHUB_OUTPUT
+          
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "data: daily update $(date +%Y-%m-%d)"
+          git push

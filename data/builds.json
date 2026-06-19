@@ -1,0 +1,858 @@
+[
+  {
+    "pokemon": "froslass",
+    "tier": "S",
+    "builds": [
+      {
+        "name": "Mega 特攻手",
+        "category": "meta",
+        "item": "Froslassite",
+        "ability": "Cursed Body",
+        "nature": "Timid",
+        "sp": {
+          "hp": 4,
+          "atk": 0,
+          "def": 4,
+          "spa": 28,
+          "spd": 4,
+          "spe": 26
+        },
+        "moves": [
+          "shadow-ball",
+          "blizzard",
+          "thunderbolt",
+          "protect"
+        ],
+        "description": "Mega 雪妖女的核心用法。极限特攻+极速，配合诅咒之躯特性封锁对手招式。暴风雪在冰雹下必中，闪电可打水/飞。",
+        "matchups": {
+          "favorable": [
+            "garchomp",
+            "salamence",
+            "dragonite"
+          ],
+          "unfavorable": [
+            "tyranitar",
+            "heatran",
+            "incineroar"
+          ]
+        }
+      },
+      {
+        "name": "辅助控场型",
+        "category": "support",
+        "item": "Focus Sash",
+        "ability": "Cursed Body",
+        "nature": "Timid",
+        "sp": {
+          "hp": 4,
+          "atk": 0,
+          "def": 0,
+          "spa": 20,
+          "spd": 10,
+          "spe": 32
+        },
+        "moves": [
+          "icy-wind",
+          "will-o-wisp",
+          "destiny-bond",
+          "protect"
+        ],
+        "description": "气息腰带确保一次行动。冰冻风减速+鬼火削物攻，同归于尽制造交换压力。极速确保先手控场。",
+        "matchups": {
+          "favorable": [
+            "garchomp",
+            "excadrill",
+            "blaziken"
+          ],
+          "unfavorable": [
+            "tapu-fini",
+            "incineroar"
+          ]
+        }
+      },
+      {
+        "name": "双打配速型",
+        "category": "tech",
+        "item": "Froslassite",
+        "ability": "Cursed Body",
+        "nature": "Timid",
+        "sp": {
+          "hp": 4,
+          "atk": 0,
+          "def": 4,
+          "spa": 24,
+          "spd": 4,
+          "spe": 30
+        },
+        "moves": [
+          "icy-wind",
+          "shadow-ball",
+          "taunt",
+          "protect"
+        ],
+        "description": "冰冻风+挑衅双打辅助核心。Mega 后速度碾压大部分环境，挑衅封锁TR/顺风。",
+        "matchups": {
+          "favorable": [
+            "dusclops",
+            "gothitelle",
+            "porygon2"
+          ],
+          "unfavorable": [
+            "tyranitar",
+            "metagross"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "pokemon": "excadrill",
+    "tier": "S",
+    "builds": [
+      {
+        "name": "Mega 穿盾突破",
+        "category": "meta",
+        "item": "Excadrillite",
+        "ability": "Mold Breaker",
+        "nature": "Adamant",
+        "sp": {
+          "hp": 4,
+          "atk": 28,
+          "def": 4,
+          "spa": 0,
+          "spd": 4,
+          "spe": 26
+        },
+        "moves": [
+          "earthquake",
+          "iron-head",
+          "rock-slide",
+          "protect"
+        ],
+        "description": "Mega 龙头地鼠标准物攻手。穿透特性无视浮游/坚硬，地震+铁头全覆盖。岩石封锁飞行系。",
+        "matchups": {
+          "favorable": [
+            "heatran",
+            "ferrothorn",
+            "rotom-wash"
+          ],
+          "unfavorable": [
+            "landorus-therian",
+            "garchomp"
+          ]
+        }
+      },
+      {
+        "name": "沙隐速攻型",
+        "category": "offensive",
+        "item": "Focus Sash",
+        "ability": "Sand Rush",
+        "nature": "Jolly",
+        "sp": {
+          "hp": 0,
+          "atk": 28,
+          "def": 4,
+          "spa": 0,
+          "spd": 4,
+          "spe": 30
+        },
+        "moves": [
+          "earthquake",
+          "iron-head",
+          "rock-slide",
+          "protect"
+        ],
+        "description": "沙暴下速度翻倍，配合班基拉斯/河马兽组成沙暴核心。气息腰带确保至少一次输出。",
+        "matchups": {
+          "favorable": [
+            "charizard",
+            "volcarona",
+            "gengar"
+          ],
+          "unfavorable": [
+            "landorus-therian",
+            "amoonguss"
+          ]
+        }
+      },
+      {
+        "name": "Mega 速度控制",
+        "category": "tech",
+        "item": "Excadrillite",
+        "ability": "Mold Breaker",
+        "nature": "Jolly",
+        "sp": {
+          "hp": 4,
+          "atk": 20,
+          "def": 4,
+          "spa": 0,
+          "spd": 6,
+          "spe": 32
+        },
+        "moves": [
+          "earthquake",
+          "iron-head",
+          "rock-slide",
+          "protect"
+        ],
+        "description": "极速型 Mega，确保对镜速度优势。放弃部分火力换取抢先行动权。",
+        "matchups": {
+          "favorable": [
+            "froslass",
+            "gengar",
+            "charizard"
+          ],
+          "unfavorable": [
+            "garchomp",
+            "landorus-therian"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "pokemon": "garchomp",
+    "tier": "S",
+    "builds": [
+      {
+        "name": "Mega 混合攻击",
+        "category": "meta",
+        "item": "Garchompite",
+        "ability": "Rough Skin",
+        "nature": "Naive",
+        "sp": {
+          "hp": 0,
+          "atk": 20,
+          "def": 4,
+          "spa": 12,
+          "spd": 0,
+          "spe": 30
+        },
+        "moves": [
+          "earthquake",
+          "dragon-claw",
+          "fire-blast",
+          "protect"
+        ],
+        "description": "Mega 烈咬陆鲨混合型。物攻为主+大字爆炎打钢系（巨钳螳螂、坚果哑铃）。利刃特性强化龙爪伤害。",
+        "matchups": {
+          "favorable": [
+            "excadrill",
+            "heatran",
+            "ferrothorn"
+          ],
+          "unfavorable": [
+            "froslass",
+            "togekiss",
+            "fairy-types"
+          ]
+        }
+      },
+      {
+        "name": "围巾速攻",
+        "category": "offensive",
+        "item": "Focus Sash",
+        "ability": "Rough Skin",
+        "nature": "Jolly",
+        "sp": {
+          "hp": 0,
+          "atk": 28,
+          "def": 4,
+          "spa": 0,
+          "spd": 2,
+          "spe": 32
+        },
+        "moves": [
+          "earthquake",
+          "dragon-claw",
+          "rock-slide",
+          "protect"
+        ],
+        "description": "Reg M-B 解禁围巾后使用。M-A 中用气息腰带替代，确保极速+一次行动。鲨皮给物攻手压力。",
+        "matchups": {
+          "favorable": [
+            "volcarona",
+            "charizard",
+            "excadrill"
+          ],
+          "unfavorable": [
+            "froslass",
+            "togekiss"
+          ]
+        }
+      },
+      {
+        "name": "Protect+攻击耐久",
+        "category": "defensive",
+        "item": "Leftovers",
+        "ability": "Rough Skin",
+        "nature": "Impish",
+        "sp": {
+          "hp": 20,
+          "atk": 16,
+          "def": 16,
+          "spa": 0,
+          "spd": 10,
+          "spe": 4
+        },
+        "moves": [
+          "earthquake",
+          "dragon-claw",
+          "stealth-rock",
+          "protect"
+        ],
+        "description": "耐久型烈咬陆鲨，吃物攻手伤害后利用鲨皮+地震反击。适合慢速队或需要隐石展开的队伍。",
+        "matchups": {
+          "favorable": [
+            "excadrill",
+            "blaziken",
+            "lucario"
+          ],
+          "unfavorable": [
+            "froslass",
+            "dragapult",
+            "special-attackers"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "pokemon": "charizard",
+    "tier": "A",
+    "builds": [
+      {
+        "name": "Mega Y 晴天炮台",
+        "category": "meta",
+        "item": "Charizardite Y",
+        "ability": "Drought",
+        "nature": "Timid",
+        "sp": {
+          "hp": 4,
+          "atk": 0,
+          "def": 4,
+          "spa": 28,
+          "spd": 4,
+          "spe": 26
+        },
+        "moves": [
+          "heat-wave",
+          "solar-beam",
+          "overheat",
+          "protect"
+        ],
+        "description": "Mega Y 标准晴天特攻。热风双打AOE，日光束打水/地，过热单点爆发。干旱特性自带晴天强化火招。",
+        "matchups": {
+          "favorable": [
+            "ferrothorn",
+            "amoonguss",
+            "scizor"
+          ],
+          "unfavorable": [
+            "tyranitar",
+            "politoed",
+            "pelipper"
+          ]
+        }
+      },
+      {
+        "name": "Mega X 物攻龙",
+        "category": "offensive",
+        "item": "Charizardite X",
+        "ability": "Tough Claws",
+        "nature": "Adamant",
+        "sp": {
+          "hp": 4,
+          "atk": 28,
+          "def": 4,
+          "spa": 0,
+          "spd": 4,
+          "spe": 26
+        },
+        "moves": [
+          "flare-blitz",
+          "dragon-claw",
+          "thunder-punch",
+          "protect"
+        ],
+        "description": "Mega X 物攻型。硬爪特性+利刃强化接触/切割招式。龙爪+闪焰冲锋双STAB，雷拳打水飞。",
+        "matchups": {
+          "favorable": [
+            "amoonguss",
+            "ferrothorn",
+            "scizor"
+          ],
+          "unfavorable": [
+            "garchomp",
+            "tyranitar",
+            "landorus-therian"
+          ]
+        }
+      },
+      {
+        "name": "Mega Y 辅攻型",
+        "category": "support",
+        "item": "Charizardite Y",
+        "ability": "Drought",
+        "nature": "Modest",
+        "sp": {
+          "hp": 12,
+          "atk": 0,
+          "def": 8,
+          "spa": 24,
+          "spd": 4,
+          "spe": 18
+        },
+        "moves": [
+          "heat-wave",
+          "solar-beam",
+          "tailwind",
+          "protect"
+        ],
+        "description": "兼具输出和辅助。顺风为队友提速，热风持续输出AOE。适合需要天气+速度控制的队伍。",
+        "matchups": {
+          "favorable": [
+            "ferrothorn",
+            "scizor",
+            "amoonguss"
+          ],
+          "unfavorable": [
+            "tyranitar",
+            "kingdra",
+            "pelipper"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "pokemon": "metagross",
+    "tier": "A",
+    "builds": [
+      {
+        "name": "Mega 物攻核心",
+        "category": "meta",
+        "item": "Metagrossite",
+        "ability": "Tough Claws",
+        "nature": "Adamant",
+        "sp": {
+          "hp": 12,
+          "atk": 24,
+          "def": 4,
+          "spa": 0,
+          "spd": 4,
+          "spe": 22
+        },
+        "moves": [
+          "iron-head",
+          "zen-headbutt",
+          "ice-punch",
+          "protect"
+        ],
+        "description": "Mega 巨金怪标准型。硬爪加成所有接触招式。铁头+禅头双STAB，冰拳打龙/地/飞。钢超双抗妖精。",
+        "matchups": {
+          "favorable": [
+            "froslass",
+            "togekiss",
+            "gardevoir"
+          ],
+          "unfavorable": [
+            "incineroar",
+            "heatran",
+            "excadrill"
+          ]
+        }
+      },
+      {
+        "name": "Mega 极速型",
+        "category": "offensive",
+        "item": "Metagrossite",
+        "ability": "Tough Claws",
+        "nature": "Jolly",
+        "sp": {
+          "hp": 4,
+          "atk": 20,
+          "def": 4,
+          "spa": 0,
+          "spd": 6,
+          "spe": 32
+        },
+        "moves": [
+          "iron-head",
+          "zen-headbutt",
+          "bullet-punch",
+          "protect"
+        ],
+        "description": "极速 Mega，确保先于多数中速段。子弹拳优先度+1收割残血。对镜速度占优。",
+        "matchups": {
+          "favorable": [
+            "froslass",
+            "gengar",
+            "togekiss"
+          ],
+          "unfavorable": [
+            "garchomp",
+            "excadrill",
+            "landorus-therian"
+          ]
+        }
+      },
+      {
+        "name": "Mega 耐久攻",
+        "category": "defensive",
+        "item": "Metagrossite",
+        "ability": "Tough Claws",
+        "nature": "Careful",
+        "sp": {
+          "hp": 24,
+          "atk": 12,
+          "def": 8,
+          "spa": 0,
+          "spd": 18,
+          "spe": 4
+        },
+        "moves": [
+          "iron-head",
+          "zen-headbutt",
+          "ice-punch",
+          "protect"
+        ],
+        "description": "耐久向，在TR下运作或承受特攻打击后反击。HP+特防投资确保吃暗影球/大字爆炎。",
+        "matchups": {
+          "favorable": [
+            "froslass",
+            "togekiss",
+            "gardevoir"
+          ],
+          "unfavorable": [
+            "garchomp",
+            "chandelure",
+            "excadrill"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "pokemon": "tyranitar",
+    "tier": "A",
+    "builds": [
+      {
+        "name": "沙暴核心坦克",
+        "category": "meta",
+        "item": "Leftovers",
+        "ability": "Sand Stream",
+        "nature": "Careful",
+        "sp": {
+          "hp": 28,
+          "atk": 8,
+          "def": 8,
+          "spa": 0,
+          "spd": 18,
+          "spe": 4
+        },
+        "moves": [
+          "rock-slide",
+          "crunch",
+          "thunder-wave",
+          "protect"
+        ],
+        "description": "沙暴核心+50%特防坦克。电磁波减速控场，岩崩AOE骚扰+畏缩。配合龙头地鼠沙隐速攻。",
+        "matchups": {
+          "favorable": [
+            "charizard",
+            "froslass",
+            "gengar"
+          ],
+          "unfavorable": [
+            "excadrill",
+            "lucario",
+            "blaziken"
+          ]
+        }
+      },
+      {
+        "name": "Mega 物攻突破",
+        "category": "offensive",
+        "item": "Tyranitarite",
+        "ability": "Sand Stream",
+        "nature": "Adamant",
+        "sp": {
+          "hp": 12,
+          "atk": 28,
+          "def": 4,
+          "spa": 0,
+          "spd": 4,
+          "spe": 18
+        },
+        "moves": [
+          "rock-slide",
+          "crunch",
+          "ice-punch",
+          "protect"
+        ],
+        "description": "Mega 后物攻暴力输出。沙暴+Mega双重buff，岩崩+咬碎双STAB，冰拳补打龙/地。",
+        "matchups": {
+          "favorable": [
+            "charizard",
+            "froslass",
+            "volcarona"
+          ],
+          "unfavorable": [
+            "excadrill",
+            "lucario",
+            "conkeldurr"
+          ]
+        }
+      },
+      {
+        "name": "TR 模式慢坦",
+        "category": "tech",
+        "item": "Weakness Policy",
+        "ability": "Sand Stream",
+        "nature": "Brave",
+        "sp": {
+          "hp": 28,
+          "atk": 20,
+          "def": 10,
+          "spa": 0,
+          "spd": 8,
+          "spe": 0
+        },
+        "moves": [
+          "rock-slide",
+          "crunch",
+          "ice-punch",
+          "protect"
+        ],
+        "description": "0速+弱点保险，TR下先手。吃一发弱点后双攻+2暴力输出。适合搭配哥德小姐/彷徨夜灵。",
+        "matchups": {
+          "favorable": [
+            "charizard",
+            "gengar",
+            "froslass"
+          ],
+          "unfavorable": [
+            "excadrill",
+            "conkeldurr",
+            "lucario"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "pokemon": "volcarona",
+    "tier": "A",
+    "builds": [
+      {
+        "name": "Mega 蝶舞核心",
+        "category": "meta",
+        "item": "Volcaronite",
+        "ability": "Flame Body",
+        "nature": "Timid",
+        "sp": {
+          "hp": 4,
+          "atk": 0,
+          "def": 4,
+          "spa": 28,
+          "spd": 4,
+          "spe": 26
+        },
+        "moves": [
+          "heat-wave",
+          "bug-buzz",
+          "quiver-dance",
+          "protect"
+        ],
+        "description": "蝶舞+Mega 后三围飞升。一次蝶舞后速度超绝大多数环境，火+虫双STAB覆盖面广。",
+        "matchups": {
+          "favorable": [
+            "ferrothorn",
+            "amoonguss",
+            "metagross"
+          ],
+          "unfavorable": [
+            "tyranitar",
+            "garchomp",
+            "pelipper"
+          ]
+        }
+      },
+      {
+        "name": "Mega 双打AOE",
+        "category": "offensive",
+        "item": "Volcaronite",
+        "ability": "Flame Body",
+        "nature": "Modest",
+        "sp": {
+          "hp": 4,
+          "atk": 0,
+          "def": 0,
+          "spa": 32,
+          "spd": 4,
+          "spe": 26
+        },
+        "moves": [
+          "heat-wave",
+          "bug-buzz",
+          "giga-drain",
+          "protect"
+        ],
+        "description": "极限特攻不蝶舞，直接输出。热风AOE+虫鸣单点，巨大吸收回血打水/岩。",
+        "matchups": {
+          "favorable": [
+            "ferrothorn",
+            "amoonguss",
+            "excadrill"
+          ],
+          "unfavorable": [
+            "tyranitar",
+            "pelipper",
+            "garchomp"
+          ]
+        }
+      },
+      {
+        "name": "非Mega 气息腰带",
+        "category": "tech",
+        "item": "Focus Sash",
+        "ability": "Flame Body",
+        "nature": "Timid",
+        "sp": {
+          "hp": 0,
+          "atk": 0,
+          "def": 0,
+          "spa": 32,
+          "spd": 2,
+          "spe": 32
+        },
+        "moves": [
+          "heat-wave",
+          "bug-buzz",
+          "tailwind",
+          "rage-powder"
+        ],
+        "description": "辅助型火神蛾。顺风提速+愤怒粉引流保护队友。气息腰带确保一次行动。不Mega，把Mega留给别人。",
+        "matchups": {
+          "favorable": [
+            "ferrothorn",
+            "amoonguss",
+            "scizor"
+          ],
+          "unfavorable": [
+            "tyranitar",
+            "garchomp"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "pokemon": "togekiss",
+    "tier": "A",
+    "builds": [
+      {
+        "name": "Mega 天恩控场",
+        "category": "meta",
+        "item": "Togekissite",
+        "ability": "Serene Grace",
+        "nature": "Timid",
+        "sp": {
+          "hp": 12,
+          "atk": 0,
+          "def": 4,
+          "spa": 24,
+          "spd": 4,
+          "spe": 22
+        },
+        "moves": [
+          "air-slash",
+          "dazzling-gleam",
+          "follow-me",
+          "protect"
+        ],
+        "description": "天恩60%畏缩空气斩+看我引流。Mega 后耐久飞涨，稳定控场核心。闪耀精灵AOE打龙/格斗。",
+        "matchups": {
+          "favorable": [
+            "garchomp",
+            "excadrill",
+            "lucario"
+          ],
+          "unfavorable": [
+            "metagross",
+            "excadrill",
+            "heatran"
+          ]
+        }
+      },
+      {
+        "name": "非Mega 跟我来",
+        "category": "support",
+        "item": "Sitrus Berry",
+        "ability": "Serene Grace",
+        "nature": "Bold",
+        "sp": {
+          "hp": 28,
+          "atk": 0,
+          "def": 16,
+          "spa": 8,
+          "spd": 10,
+          "spe": 4
+        },
+        "moves": [
+          "follow-me",
+          "dazzling-gleam",
+          "helping-hand",
+          "protect"
+        ],
+        "description": "纯辅助波克基斯。看我来引流+帮助之手强化队友伤害。肉体配合树果持续站场。",
+        "matchups": {
+          "favorable": [
+            "garchomp",
+            "hydreigon",
+            "fighting-types"
+          ],
+          "unfavorable": [
+            "metagross",
+            "excadrill"
+          ]
+        }
+      },
+      {
+        "name": "Mega 极速压制",
+        "category": "offensive",
+        "item": "Togekissite",
+        "ability": "Serene Grace",
+        "nature": "Timid",
+        "sp": {
+          "hp": 4,
+          "atk": 0,
+          "def": 0,
+          "spa": 28,
+          "spd": 2,
+          "spe": 32
+        },
+        "moves": [
+          "air-slash",
+          "dazzling-gleam",
+          "flamethrower",
+          "protect"
+        ],
+        "description": "极速型 Mega。空气斩畏缩+高速确保先手。喷射火焰打钢系。适合需要快速压制的队伍。",
+        "matchups": {
+          "favorable": [
+            "garchomp",
+            "excadrill",
+            "amoonguss"
+          ],
+          "unfavorable": [
+            "metagross",
+            "heatran",
+            "rotom-wash"
+          ]
+        }
+      }
+    ]
+  }
+]
