@@ -29,6 +29,11 @@ npm run build   # 生产构建
 npm run test    # 运行测试
 ```
 
+> ⚠️ **WSL 用户注意**: Next.js 16 Turbopack 在 `/mnt/c/` (DrvFs) 上无法正常保持
+> dev server 运行（inotify 不可用）。解决方案：
+> 1. 在 **Windows PowerShell** 下运行 `npm run dev`（推荐）
+> 2. 或将项目复制到 WSL native 路径（如 `~/projects/`）开发
+
 ## 数据更新
 
 ```bash
