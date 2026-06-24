@@ -9699,7 +9699,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Sets Light Screen on the user’s side of the field after inflicting damage."
+    "description": "The user unleashes a strong beam from its core. This move deals twice the damage if the target is Dynamaxed."
   },
   {
     "id": 745,
@@ -9712,7 +9712,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Sets Reflect on the user’s side of the field after inflicting damage."
+    "description": "The user ignores the effects of opposing Pokémon's moves and Abilities that draw in moves, allowing this move to hit the chosen target."
   },
   {
     "id": 746,

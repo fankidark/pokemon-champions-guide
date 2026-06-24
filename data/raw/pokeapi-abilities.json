@@ -581,7 +581,8 @@
       "tauros-paldea-aqua-breed",
       "squawkabilly-blue-plumage",
       "squawkabilly-yellow-plumage",
-      "squawkabilly-white-plumage"
+      "squawkabilly-white-plumage",
+      "scrafty-mega"
     ]
   },
   {
@@ -5101,6 +5102,22 @@
     "description": "When the Pokémon takes damage from a move, it burns the attacker.",
     "pokemon": [
       "scovillain-mega"
+    ]
+  },
+  {
+    "id": 312,
+    "name": "eelevate",
+    "description": "The Pokémon floats off the ground, making it immune to Ground-type moves, as well as the Spikes, Toxic Spikes, and Sticky Web statuses. When the Pokémon knocks out a target with an attack, its highest stat is boosted by 1 stage.",
+    "pokemon": [
+      "eelektross-mega"
+    ]
+  },
+  {
+    "id": 313,
+    "name": "fire-mane",
+    "description": "Boosts the power of the Pokémon's Fire-type moves by 50%.",
+    "pokemon": [
+      "pyroar-mega"
     ]
   },
   {
