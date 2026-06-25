@@ -4,7 +4,7 @@
   <link rel="preload" href="https://cdn.pikalytics.com/images/fonts/lato/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="https://cdn.pikalytics.com/images/fonts/lato/lato-700-latin.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="https://cdn.pikalytics.com/images/fonts/lato/lato-300-latin.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="stylesheet" type="text/css" href="https://cdn.pikalytics.com/styles/styles.7a5fc1af31ec2923.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.pikalytics.com/styles/styles.258765dc200bed8b.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.pikalytics.com/styles/dex-critical.ec17c17b7c7078ab.css">
   <link rel="preload" href="https://cdn.pikalytics.com/styles/dex.b2bbaa81a45741af.css" as="style" onload="this.onload=null;this.rel=&apos;stylesheet&apos;">
   <noscript><link rel="stylesheet" href="/styles/dex.css"></noscript>
@@ -76,6 +76,9 @@
       enable_page_level_ads: true
     });
   </script> -->
+  <!-- Warm up the ad-server connection early to cut first-ad latency -->
+  <link rel="preconnect" href="https://s.nitropay.com" crossorigin="">
+  <link rel="dns-prefetch" href="https://s.nitropay.com">
   <script type="text/javascript">
     window.__nitroAdsLoadState = 'idle';
     window['nitroAds'] = window['nitroAds'] || {
@@ -7060,7 +7063,7 @@
     <a title="Support us on ko-fi.com" href="https://ko-fi.com/pikalytics" target="_blank"><img src="https://cdn.pikalytics.com/images/cup-border.png" class="kofiimg">Support Us&#xA0;&#xA0;&#x2764;&#xFE0F;</a>
     &#xA0;&#xA0;
     <br>
-    &#xA0;&#xA0;<a href="/cdn-cgi/l/email-protection#cdbda4a6aca1b4b9a4aebe8daaa0aca4a1e3aea2a0" target="_blank">Advertise on Pikalytics</a>
+    &#xA0;&#xA0;<a href="/cdn-cgi/l/email-protection#26564f4d474a5f524f455566414b474f4a0845494b" target="_blank">Advertise on Pikalytics</a>
     &#xA0;&#xA0;|&#xA0;&#xA0;<a href="/champions">Champions</a>
     &#xA0;&#xA0;|&#xA0;&#xA0;<a href="https://pikalytics.flycricket.io/privacy.html" target="_blank">Privacy Policy</a>
     &#xA0;&#xA0;<span data-ccpa-link="1"></span>
@@ -13781,7 +13784,7 @@ for team builder pokepaste functionality. Contenteditable - fuuuuuuuuuuuuuuuuuuu
         error_loading(e);
       };
       loadJS('https://cdn.pikalytics.com/scripts/libs.d31e3c876c448b6b.js', scriptComplete, document.body);
-      loadJS('https://cdn.pikalytics.com/scripts/game.7cafefe895f58feb.js', scriptComplete, document.body);
+      loadJS('https://cdn.pikalytics.com/scripts/game.107b875cba4f22b0.js', scriptComplete, document.body);
     }
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13794,27 +13797,32 @@ for team builder pokepaste functionality. Contenteditable - fuuuuuuuuuuuuuuuuuuu
     gtag('js', new Date());
 
     gtag('config', 'G-8GXTK03HYW');
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      (i[r] =
-        i[r] ||
-        function () {
-          (i[r].q = i[r].q || []).push(arguments);
-        }),
-        (i[r].l = 1 * new Date());
-      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      'script',
-      'https://www.google-analytics.com/analytics.js',
-      'ga',
-    );
-    ga('create', 'UA-80139903-1', 'auto');
-    ga('send', 'pageview');
+    // Legacy Universal Analytics shim -> GA4. UA was retired in 2023, so the
+    // ga("send","event",category,action,label) calls across the views (pokedex,
+    // team, results, articles) had gone dead. Forward them into GA4 so the events
+    // are tracked again. Category is used as the GA4 event name (low-cardinality)
+    // with action/label as params, because action can be a Pokemon key and would
+    // blow GA4's 500-event-name limit if used as the event name.
+    window.ga =
+      window.ga ||
+      function () {
+        try {
+          if (typeof window.gtag !== 'function') return;
+          var a = arguments;
+          if (a[0] !== 'send') return;
+          if (a[1] === 'event') {
+            var name = String(a[2] || 'legacy_event')
+              .replace(/[^a-zA-Z0-9_]/g, '_')
+              .slice(0, 40);
+            var params = {};
+            if (a[3] != null) params.event_action = String(a[3]).slice(0, 100);
+            if (a[4] != null) params.event_label = String(a[4]).slice(0, 100);
+            window.gtag('event', name, params);
+          } else if (a[1] === 'pageview') {
+            window.gtag('event', 'page_view');
+          }
+        } catch (e) {}
+      };
   </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"cf35b8da820d40418a17d7c583fbd475","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>

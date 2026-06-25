@@ -958,7 +958,7 @@
       "kirlia",
       "gardevoir",
       "alakazam-mega",
-      "meowstic-mega"
+      "meowstic-male-mega"
     ]
   },
   {
@@ -1936,7 +1936,8 @@
       "lapras-gmax",
       "drednaw-gmax",
       "sliggoo-hisui",
-      "goodra-hisui"
+      "goodra-hisui",
+      "scolipede-mega"
     ]
   },
   {
@@ -2936,7 +2937,9 @@
       "fomantis",
       "lurantis",
       "enamorus-incarnate",
-      "lurantis-totem"
+      "lurantis-totem",
+      "malamar-mega",
+      "staraptor-mega"
     ]
   },
   {
@@ -2994,7 +2997,8 @@
       "annihilape",
       "kingambit",
       "ogerpon",
-      "zapdos-galar"
+      "zapdos-galar",
+      "falinks-mega"
     ]
   },
   {
@@ -3302,7 +3306,8 @@
       "tornadus-therian",
       "slowpoke-galar",
       "slowbro-galar",
-      "slowking-galar"
+      "slowking-galar",
+      "dragalge-mega"
     ]
   },
   {
@@ -3880,7 +3885,8 @@
       "aerodactyl-mega",
       "metagross-mega",
       "lycanroc-dusk",
-      "meowth-galar"
+      "meowth-galar",
+      "barbaracle-mega"
     ]
   },
   {
