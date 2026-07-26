@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { href: "/moves", label: "技能", icon: "⚡" },
   { href: "/items", label: "道具", icon: "🎒" },
   { href: "/calc", label: "计算器", icon: "🔢" },
+  { href: "/tools/speed", label: "速度线", icon: "🏁" },
   { href: "/builds", label: "配招", icon: "⚔️" },
   { href: "/teams", label: "队伍", icon: "👥" },
   { href: "/meta", label: "Meta", icon: "📊" },

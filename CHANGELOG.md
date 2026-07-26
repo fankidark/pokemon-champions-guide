@@ -1,5 +1,25 @@
 # Pokemon Champions 攻略站 — 开发日志
 
+## 2026-07-26 — 速度线工具页 (Task 5.4)
+
+### 改动
+1. **新增 `/tools/speed` 速度线工具页**（路线图 Task 5.4）：
+   - 关键速度线卡片：8 条 Reg M-A 核心档位（150 Mega胡地 → 60 炽焰咆哮虎），来源 pikachampions.com speed-tiers 指南
+   - SP 速度投资参考表：6 个典型卡速场景（镜像 1SP / 超白蓬蓬 ~14-17SP 等）
+   - 全量速度档位表：Champions 208 只按基础速度排序，S/A/B/C/D 五档着色
+   - 交互：中英文搜索、围巾×1.5/顺风×2/围巾+顺风×3 加成实时换算、戏法空间反向排序模式
+   - 集成 meta-usage 使用率标注 + MEGA 标记
+2. **导航栏**新增 🏁速度线 入口（计算器与配招之间）
+
+### 技术
+- `page.tsx`(Server) 用 names-zh.json 的 208 键过滤全量 pokemon.json → Champions-only
+- `speed-client.tsx`(Client) useMemo 处理搜索/加成/TR排序
+- tsc --noEmit 通过
+
+### 待办
+- 速度表加性格/SP 修正后的实际值计算（需接 SP 编辑器）
+- 沙暴/雨天特性（Sand Rush/Swift Swim）单独标注列
+
 ## 2026-06-20 — 中文数据 + 详情页重构 + 道具/招式完善
 
 ### 改动
