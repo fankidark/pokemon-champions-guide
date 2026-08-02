@@ -13587,32 +13587,6 @@
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/543.png"
   },
   {
-    "id": 544,
-    "name": "whirlipede",
-    "types": [
-      "bug",
-      "poison"
-    ],
-    "baseStats": {
-      "hp": 40,
-      "atk": 55,
-      "def": 99,
-      "spa": 40,
-      "spd": 79,
-      "spe": 47
-    },
-    "abilities": {
-      "normal": [
-        "poison-point",
-        "swarm"
-      ],
-      "hidden": "speed-boost"
-    },
-    "height": 12,
-    "weight": 585,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/544.png"
-  },
-  {
     "id": 545,
     "name": "scolipede",
     "types": [
