@@ -4699,7 +4699,7 @@
   {
     "id": 266,
     "name": "as-one-glastrier",
-    "description": "",
+    "description": "Combines the effects of Unnerve and Chilling Neigh.",
     "pokemon": [
       "calyrex-ice"
     ]
@@ -4707,7 +4707,7 @@
   {
     "id": 267,
     "name": "as-one-spectrier",
-    "description": "",
+    "description": "Combines the effects of Unnerve and Grim Neigh.",
     "pokemon": [
       "calyrex-shadow"
     ]
