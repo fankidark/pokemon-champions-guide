@@ -4238,6 +4238,19 @@
     "description": "Has a chance to make the target flinch."
   },
   {
+    "id": 327,
+    "name": "sky-uppercut",
+    "type": "fighting",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 90,
+    "pp": 15,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "effectChance": null,
+    "description": "Inflicts regular damage and can hit Bounce and Fly users."
+  },
+  {
     "id": 328,
     "name": "sand-tomb",
     "type": "ground",
@@ -9779,6 +9792,19 @@
     "id": 754,
     "name": "bolt-beak",
     "type": "electric",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 100,
+    "pp": 10,
+    "priority": 0,
+    "target": "selected-pokemon",
+    "effectChance": null,
+    "description": ""
+  },
+  {
+    "id": 755,
+    "name": "fishious-rend",
+    "type": "water",
     "category": "physical",
     "power": 85,
     "accuracy": 100,
