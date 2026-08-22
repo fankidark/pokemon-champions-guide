@@ -1382,8 +1382,8 @@
     },
     "abilities": {
       "normal": [
-        "intimidate",
-        "flash-fire"
+        "flash-fire",
+        "intimidate"
       ],
       "hidden": "justified"
     },
@@ -1406,8 +1406,8 @@
     },
     "abilities": {
       "normal": [
-        "intimidate",
-        "flash-fire"
+        "flash-fire",
+        "intimidate"
       ],
       "hidden": "justified"
     },
@@ -1791,8 +1791,8 @@
     },
     "abilities": {
       "normal": [
-        "rock-head",
-        "sturdy"
+        "sturdy",
+        "rock-head"
       ],
       "hidden": "sand-veil"
     },
@@ -2039,8 +2039,8 @@
     },
     "abilities": {
       "normal": [
-        "early-bird",
-        "run-away"
+        "run-away",
+        "early-bird"
       ],
       "hidden": "tangled-feet"
     },
@@ -2064,8 +2064,8 @@
     },
     "abilities": {
       "normal": [
-        "run-away",
-        "early-bird"
+        "early-bird",
+        "run-away"
       ],
       "hidden": "tangled-feet"
     },
@@ -2427,8 +2427,8 @@
     },
     "abilities": {
       "normal": [
-        "soundproof",
-        "static"
+        "static",
+        "soundproof"
       ],
       "hidden": "aftermath"
     },
@@ -2523,8 +2523,8 @@
     },
     "abilities": {
       "normal": [
-        "rock-head",
-        "lightning-rod"
+        "lightning-rod",
+        "rock-head"
       ],
       "hidden": "battle-armor"
     },
@@ -3390,8 +3390,8 @@
     },
     "abilities": {
       "normal": [
-        "swift-swim",
-        "battle-armor"
+        "battle-armor",
+        "swift-swim"
       ],
       "hidden": "weak-armor"
     },
@@ -3415,8 +3415,8 @@
     },
     "abilities": {
       "normal": [
-        "swift-swim",
-        "battle-armor"
+        "battle-armor",
+        "swift-swim"
       ],
       "hidden": "weak-armor"
     },
@@ -3440,8 +3440,8 @@
     },
     "abilities": {
       "normal": [
-        "rock-head",
-        "pressure"
+        "pressure",
+        "rock-head"
       ],
       "hidden": "unnerve"
     },
@@ -4003,8 +4003,8 @@
     },
     "abilities": {
       "normal": [
-        "swarm",
-        "early-bird"
+        "early-bird",
+        "swarm"
       ],
       "hidden": "rattled"
     },
@@ -4053,8 +4053,8 @@
     },
     "abilities": {
       "normal": [
-        "swarm",
-        "insomnia"
+        "insomnia",
+        "swarm"
       ],
       "hidden": "sniper"
     },
@@ -4248,8 +4248,8 @@
     },
     "abilities": {
       "normal": [
-        "hustle",
-        "serene-grace"
+        "serene-grace",
+        "hustle"
       ],
       "hidden": "super-luck"
     },
@@ -5046,8 +5046,8 @@
     },
     "abilities": {
       "normal": [
-        "rock-head",
-        "sturdy"
+        "sturdy",
+        "rock-head"
       ],
       "hidden": "sheer-force"
     },
@@ -5564,8 +5564,8 @@
     },
     "abilities": {
       "normal": [
-        "early-bird",
-        "flash-fire"
+        "flash-fire",
+        "early-bird"
       ],
       "hidden": "unnerve"
     },
@@ -12505,8 +12505,8 @@
     },
     "abilities": {
       "normal": [
-        "forewarn",
-        "synchronize"
+        "synchronize",
+        "forewarn"
       ],
       "hidden": "telepathy"
     },
@@ -13675,8 +13675,8 @@
     },
     "abilities": {
       "normal": [
-        "solid-rock",
-        "sturdy"
+        "sturdy",
+        "solid-rock"
       ],
       "hidden": "swift-swim"
     },
@@ -15292,8 +15292,8 @@
     },
     "abilities": {
       "normal": [
-        "big-pecks",
-        "overcoat"
+        "overcoat",
+        "big-pecks"
       ],
       "hidden": "weak-armor"
     },
@@ -18531,8 +18531,8 @@
     },
     "abilities": {
       "normal": [
-        "oblivious",
-        "leaf-guard"
+        "leaf-guard",
+        "oblivious"
       ],
       "hidden": "sweet-veil"
     },
@@ -20145,8 +20145,8 @@
     },
     "abilities": {
       "normal": [
-        "regenerator",
-        "cotton-down"
+        "cotton-down",
+        "regenerator"
       ],
       "hidden": "effect-spore"
     },
@@ -20436,8 +20436,8 @@
     },
     "abilities": {
       "normal": [
-        "ripen",
-        "gluttony"
+        "gluttony",
+        "ripen"
       ],
       "hidden": "hustle"
     },
