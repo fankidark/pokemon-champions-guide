@@ -2100,8 +2100,8 @@
     },
     "abilities": {
       "normal": [
-        "run-away",
-        "early-bird"
+        "early-bird",
+        "run-away"
       ],
       "hidden": "tangled-feet"
     },
@@ -19081,8 +19081,8 @@
     },
     "abilities": {
       "normal": [
-        "leaf-guard",
-        "oblivious"
+        "oblivious",
+        "leaf-guard"
       ],
       "hidden": "sweet-veil"
     },
@@ -20741,8 +20741,8 @@
     },
     "abilities": {
       "normal": [
-        "cotton-down",
-        "regenerator"
+        "regenerator",
+        "cotton-down"
       ],
       "hidden": "effect-spore"
     },
