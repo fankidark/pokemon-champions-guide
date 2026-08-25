@@ -1791,8 +1791,8 @@
     },
     "abilities": {
       "normal": [
-        "sturdy",
-        "rock-head"
+        "rock-head",
+        "sturdy"
       ],
       "hidden": "sand-veil"
     },
@@ -2619,8 +2619,8 @@
     },
     "abilities": {
       "normal": [
-        "oblivious",
-        "own-tempo"
+        "own-tempo",
+        "oblivious"
       ],
       "hidden": "cloud-nine"
     },
@@ -4053,8 +4053,8 @@
     },
     "abilities": {
       "normal": [
-        "insomnia",
-        "swarm"
+        "swarm",
+        "insomnia"
       ],
       "hidden": "sniper"
     },
@@ -5119,8 +5119,8 @@
     },
     "abilities": {
       "normal": [
-        "swift-swim",
-        "poison-point"
+        "poison-point",
+        "swift-swim"
       ],
       "hidden": "intimidate"
     },
@@ -5489,8 +5489,8 @@
     },
     "abilities": {
       "normal": [
-        "water-absorb",
-        "swift-swim"
+        "swift-swim",
+        "water-absorb"
       ],
       "hidden": "water-veil"
     },
@@ -7843,8 +7843,8 @@
     },
     "abilities": {
       "normal": [
-        "drought",
-        "white-smoke"
+        "white-smoke",
+        "drought"
       ],
       "hidden": "shell-armor"
     },
@@ -16913,8 +16913,8 @@
     },
     "abilities": {
       "normal": [
-        "sand-veil",
-        "dry-skin"
+        "dry-skin",
+        "sand-veil"
       ],
       "hidden": "solar-power"
     },
@@ -18888,8 +18888,8 @@
     },
     "abilities": {
       "normal": [
-        "lightning-rod",
-        "iron-barbs"
+        "iron-barbs",
+        "lightning-rod"
       ],
       "hidden": "sturdy"
     },
