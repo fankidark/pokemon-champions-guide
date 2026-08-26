@@ -9724,8 +9724,8 @@
     "pp": 10,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
-    "description": "Seeds the target after inflicting damage."
+    "effectChance": 100,
+    "description": "Prevents you and the target from switching out. "
   },
   {
     "id": 747,
@@ -9738,7 +9738,7 @@
     "priority": 0,
     "target": "user",
     "effectChance": 100,
-    "description": "Cures the entire party of major status effects after inflicting damage."
+    "description": "User consumes berry and raises its defense by 2 stages."
   },
   {
     "id": 748,
@@ -9764,7 +9764,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": 100,
-    "description": ""
+    "description": "Lowers the target's Speed by 1 stage. Until the target switches out, the effectiveness of Fire-type moves is doubled against it."
   },
   {
     "id": 750,
@@ -9815,8 +9815,8 @@
     "pp": 15,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
-    "description": ""
+    "effectChance": 100,
+    "description": "Prevents the target from switching out. At the end of each turn, the targets Defense and Special Defense are lowered by 1 stage."
   },
   {
     "id": 754,
@@ -9867,8 +9867,8 @@
     "pp": 10,
     "priority": 0,
     "target": "selected-pokemon-me-first",
-    "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "effectChance": 100,
+    "description": "Changes the weather to sunny for five turns."
   },
   {
     "id": 758,
@@ -9906,8 +9906,8 @@
     "pp": 10,
     "priority": 0,
     "target": "selected-pokemon-me-first",
-    "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "effectChance": 100,
+    "description": "If this move hits, lower the Speed of all Pokemon on the opposing side by 1 stage."
   },
   {
     "id": 761,
@@ -10088,8 +10088,8 @@
     "pp": 10,
     "priority": 0,
     "target": "selected-pokemon-me-first",
-    "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "effectChance": 100,
+    "description": "If this move hits, raise the Defense of the user and its allies' by 1 stage."
   },
   {
     "id": 775,
@@ -10115,7 +10115,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": ""
+    "description": "Damage is calculated using the user's Defense stat as its Attack, including stat stage changes. "
   },
   {
     "id": 777,
@@ -10192,8 +10192,8 @@
     "pp": 5,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
-    "description": ""
+    "effectChance": 100,
+    "description": "Deals twice the damage if the target is Dynamaxed."
   },
   {
     "id": 783,
@@ -10245,7 +10245,7 @@
     "priority": 0,
     "target": "all-opponents",
     "effectChance": null,
-    "description": ""
+    "description": "Inflicts regular damage with no additional effect."
   },
   {
     "id": 787,
@@ -10258,7 +10258,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": 100,
-    "description": ""
+    "description": "Lower the targets Special Defense by 1 stage."
   },
   {
     "id": 788,
@@ -10271,7 +10271,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": 100,
-    "description": "Lowers the target’s Defense by one stage after inflicting damage."
+    "description": "Lower the targets Defense by 1 stage. Damage is increased by 50% during Gravitys effect."
   },
   {
     "id": 789,
@@ -10322,8 +10322,8 @@
     "pp": 10,
     "priority": 4,
     "target": "user",
-    "effectChance": null,
-    "description": ""
+    "effectChance": 100,
+    "description": "Prevents any moves from hitting the user this turn. If this blocks a contact move, the user has their Defense lowered by 2 stages."
   },
   {
     "id": 793,
@@ -10348,7 +10348,7 @@
     "pp": 5,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
+    "effectChance": 100,
     "description": "User foregoes its next turn to recharge."
   },
   {
@@ -10361,7 +10361,7 @@
     "pp": 5,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
+    "effectChance": 100,
     "description": "User foregoes its next turn to recharge."
   },
   {
@@ -10374,7 +10374,7 @@
     "pp": 5,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
+    "effectChance": 100,
     "description": "Inflicts damage, and the user takes damage equal to half of its max HP, rounded up."
   },
   {
@@ -10413,7 +10413,7 @@
     "pp": 20,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
+    "effectChance": 100,
     "description": "Boosts the user’s Speed and lowers their Defense by one stage after inflicting damage two to five times in a row."
   },
   {
@@ -10427,7 +10427,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": 100,
-    "description": "Inflicts regular damage with no additional effect."
+    "description": "Requires a turn to charge before attacking. Raises the users Special Attack by 1 stage after the first turn."
   },
   {
     "id": 801,
@@ -10440,7 +10440,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": 20,
-    "description": "Inflicts regular damage with no additional effect."
+    "description": "Has a chance to poison the target. This switches categories between physical and special, depending on which would deal more damage to the target."
   },
   {
     "id": 802,
@@ -10465,8 +10465,8 @@
     "pp": 20,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "effectChance": 100,
+    "description": "If Grassy Terrain is active and the user is grounded, this move has has its priority increased by 1."
   },
   {
     "id": 804,
@@ -10492,7 +10492,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "description": "If any terrain is active and the user is grounded, this moves power is doubled and changes type to match that terrains type."
   },
   {
     "id": 806,
@@ -10634,8 +10634,8 @@
     "pp": 10,
     "priority": 0,
     "target": "user-and-allies",
-    "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "effectChance": 100,
+    "description": "Each Pokemon on the user's side has its status condition healed and restores 1/4 of its maximum HP, rounded up."
   },
   {
     "id": 817,
@@ -10647,8 +10647,8 @@
     "pp": 5,
     "priority": 0,
     "target": "selected-pokemon",
-    "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "effectChance": 100,
+    "description": "Always scores a critical hit."
   },
   {
     "id": 818,
@@ -10687,7 +10687,7 @@
     "priority": 0,
     "target": "all-opponents",
     "effectChance": null,
-    "description": "Inflicts regular damage with no additional effect."
+    "description": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power."
   },
   {
     "id": 821,
@@ -10700,7 +10700,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": 10,
-    "description": "Inflicts regular damage with no additional effect."
+    "description": "Has a chance to freeze the target."
   },
   {
     "id": 822,
@@ -10713,7 +10713,7 @@
     "priority": 0,
     "target": "all-opponents",
     "effectChance": 20,
-    "description": "Inflicts regular damage with no additional effect."
+    "description": "Has a chance to make the target flinch."
   },
   {
     "id": 823,
@@ -10726,7 +10726,7 @@
     "priority": 0,
     "target": "selected-pokemon",
     "effectChance": 100,
-    "description": "Inflicts regular damage with no additional effect."
+    "description": "Lowers the target’s Defense by one stage after inflicting damage."
   },
   {
     "id": 824,
