@@ -667,7 +667,8 @@
       "vikavolt-totem",
       "weezing-galar",
       "delphox-mega",
-      "chimecho-mega"
+      "chimecho-mega",
+      "garchomp-mega-z"
     ]
   },
   {
@@ -5125,6 +5126,14 @@
     "description": "Boosts the power of the Pokémon's Fire-type moves by 50%.",
     "pokemon": [
       "pyroar-mega"
+    ]
+  },
+  {
+    "id": 314,
+    "name": "aura-guard",
+    "description": "A Pokémon with Aura Guard takes half damage from moves that make contact.",
+    "pokemon": [
+      "lucario-mega-z"
     ]
   },
   {
