@@ -11947,6 +11947,19 @@
     "description": ""
   },
   {
+    "id": 920,
+    "name": "nihil-light",
+    "type": "dragon",
+    "category": "special",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 10,
+    "priority": 0,
+    "target": "all-opponents",
+    "effectChance": null,
+    "description": ""
+  },
+  {
     "id": 10001,
     "name": "shadow-rush",
     "type": "shadow",
